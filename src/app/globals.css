@@ -8,19 +8,86 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes cardCycle1 {
+  0%, 12% { opacity: 1 }
+  33%, 45% { opacity: 0.2 }
+  66%, 78% { opacity: 0.1 }
+  100% { opacity: 1 }
+}
+@keyframes cardCycle2 {
+  0%, 12% { opacity: 0.2 }
+  33%, 45% { opacity: 1 }
+  66%, 78% { opacity: 0.1 }
+  100% { opacity: 0.2 }
+}
+@keyframes cardCycle3 {
+  0%, 12% { opacity: 0.1 }
+  33%, 45% { opacity: 0.2 }
+  66%, 78% { opacity: 1 }
+  100% { opacity: 0.1 }
+}
+
+@keyframes toastFloat {
+  0% { opacity: 0; transform: translateY(20px); }
+  10%, 40% { opacity: 1; transform: translateY(0); }
+  60%, 100% { opacity: 0; transform: translateY(20px); }
+}
+.toast-card { animation: toastFloat 5s ease-in-out infinite; }
+
+@keyframes toastOverlay {
+  0% { opacity: 0; transform: translateY(24px); }
+  30% { opacity: 0.6; transform: translateY(6px); }
+  60% { opacity: 0.3; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(24px); }
+}
+
+
+.toast-overlay { animation: toastOverlay 5s ease-in-out infinite; }
+.toast-overlay-1 { animation: toastOverlay 5s ease-in-out infinite; animation-delay: 0s; }
+.toast-overlay-2 { animation: toastOverlay 5s ease-in-out infinite; animation-delay: 5s; }
+.toast-overlay-3 { animation: toastOverlay 5s ease-in-out infinite; animation-delay: 10s; }
+
+@keyframes overlayEnter {
+  0% { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.overlay-enter { animation: overlayEnter 1s ease-out forwards; }
+
+@keyframes marqueeLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-left { animation: marqueeLeft 30s linear infinite; }
+
+@keyframes underlineGrow {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+.tab-underline {
+  transform-origin: left;
+  animation-name: underlineGrow;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.transaction-card * {
+  animation: none !important;
+  transition-property: transform, opacity !important; 
 }
