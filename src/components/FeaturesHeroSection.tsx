@@ -3,7 +3,7 @@ import StoreButton from "./StoreButton";
 
 export default function FeaturesHeroSection() {
     return (
-        <section className="py-16 pt-16 bg-[#F9FAFB] min-h-[600px] w-full">
+        <section className="py-16 pt-16 bg-[#F9FAFB] min-h-[600px] -mx-[28px] md:mx-0">
             <div className="max-w-7xl px-[28px] md:px-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     {/* Left side - Text content */}
