@@ -77,7 +77,7 @@ export default function AutoTabs() {
 
       <div
         ref={tabsWrapRef}
-        className="mt-6 flex items-end justify-start md:justify-center gap-8 flex-nowrap overflow-x-auto overscroll-x-contain scroll-smooth md:flex-wrap md:overflow-visible md:snap-x md:snap-mandatory"
+        className="mt-6 w-full max-w-full flex items-end justify-start md:justify-center gap-8 flex-nowrap overflow-x-auto overscroll-x-contain scroll-smooth md:flex-wrap md:overflow-visible md:snap-x md:snap-mandatory"
         role="tablist"
         aria-label="Features"
         style={{
