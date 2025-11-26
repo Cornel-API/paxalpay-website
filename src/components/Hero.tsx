@@ -3,8 +3,8 @@ import StoreButton from "./StoreButton";
 
 export default function Hero() {
   return (
-    <section className="relative h-[960px] pt-26 pb-0 overflow-hidden background-[#FCF7F1] ">
-      <div className="flex flex-col items-center text-center">
+    <section className="relative w-full h-[960px] pt-26 pb-0 overflow-hidden bg-[#FCF7F1] ">
+      <div className="flex flex-col items-center text-center max-w-7xl mx-auto px-[28px]">
         <h1 className="text-center font-extrabold md:text-[52px] text-[29px] text-[#262626] leading-tight">
           Skip the P2P Wait.
           <br className="hidden md:block" /> Spend Your Crypto Instantly.

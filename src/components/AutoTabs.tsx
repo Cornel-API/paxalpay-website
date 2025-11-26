@@ -69,7 +69,7 @@ export default function AutoTabs() {
   }, [active]);
 
   return (
-    <section className="py-16 flex flex-col items-center">
+    <section className="py-16 flex flex-col items-center px-[28px]">
       <div className="text-[#262626] font-bold  text-[23px] md:text-[32px] text-center">
         The Easiest Way to Use
         <br /> Crypto in Real Life
