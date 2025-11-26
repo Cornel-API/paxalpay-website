@@ -25,7 +25,7 @@ export default function Home() {
         <ThreeTapsSection />
         {/* <About /> */}
 
-        <AutoTabs />
+        {/* <AutoTabs /> */}
         <ExchangeRatesSection />
         <SupportSection />
         <PeopleSection />
