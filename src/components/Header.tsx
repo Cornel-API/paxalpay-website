@@ -37,7 +37,6 @@ export default function Header({
     if (showQRDropdown) {
       document.addEventListener("mousedown", handleClickOutside);
     }
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -60,7 +59,7 @@ export default function Header({
         (className ?? "")
       }
     >
-      <div className="flex w-full items-center justify-between px-[28px] py-3">
+      <div className="flex w-full items-center justify-between px-[28px] pr-[18px] md:pr-[28px] py-3">
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2" aria-label="Home">
             <Image src="/logo.svg" alt="Paxalpay logo" width={112} height={28} priority />
