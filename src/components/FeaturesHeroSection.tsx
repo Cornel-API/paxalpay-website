@@ -3,14 +3,14 @@ import StoreButton from "./StoreButton";
 
 export default function FeaturesHeroSection() {
     return (
-        <section className="py-16 pt-16 bg-[#F9FAFB] min-h-[600px]">
-            <div className="max-w-7xl">
+        <section className="py-16 pt-16 bg-[#F9FAFB] min-h-[600px] -mx-[28px] md:mx-0">
+            <div className="max-w-7xl px-[28px] md:px-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     {/* Left side - Text content */}
                     <div>
                         <h1 className="text-center md:text-left text-[#262626] font-bold text-[29px] md:text-[52px] leading-tight mb-6">
                             More Than a Wallet.
-                            <br className="hidden md:block"/>
+                            <br className="hidden md:block" />
                             A Complete Financial Bridge.
                         </h1>
                         <p className="text-center md:text-left text-[#525252] text-[14px] md:text-[20px] leading-8 mb-8">

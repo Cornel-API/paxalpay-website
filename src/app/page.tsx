@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <SplashScreen>
       <main>
-        <div className="-mx-[28px] md:mx-0">
+        <div className="-mx-[58px] md:mx-0">
           <Hero />
         </div>
         <LicenseSection />

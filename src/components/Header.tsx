@@ -162,7 +162,10 @@ export default function Header({
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="rounded-lg px-2 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50"
+                  className={`rounded-lg px-2 py-2 text-sm font-medium transition-colors ${isActive(item.href)
+                    ? "text-blue-600"
+                    : "text-zinc-700 hover:bg-zinc-50"
+                    }`}
                   onClick={() => setOpen(false)}
                 >
                   {item.label}
