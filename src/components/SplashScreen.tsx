@@ -28,7 +28,7 @@ export default function SplashScreen({ children }: Props) {
         if (mounted) setBlueData(d);
       })
       .catch(() => { });
-    fetch("/motion/Artboard.json")
+    fetch("/motion/Artboard2.json")
       .then((r) => r.json())
       .then((d) => {
         if (mounted) setFullData(d);

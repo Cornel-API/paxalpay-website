@@ -130,7 +130,7 @@ export default function AutoTabs() {
           // Tabs 1, 3, 4: Side-by-side layout
           <div className="h-full overflow-hidden flex flex-col md:flex-row items-start justify-between gap-2 md:gap-6 md:px-0" role="tabpanel" id={`tab-panel-${active}`} aria-labelledby={`tab-underline-${active}`} aria-live="polite">
             <p className="text-left text-[#262626] text-[20px] leading-7 md:max-w-[447px] flex-1 px-6 py-6 md:px-0">{tabs[active].content}</p>
-            <div className="relative w-[120%] md:mx-0 md:w-[550px] h-[500px] md:h-full flex-shrink-0">
+            <div className="relative w-full md:mx-0 md:w-[550px] h-[500px] md:h-full flex-shrink-0">
               <Image
                 src={tabs[active].image}
                 alt=""
