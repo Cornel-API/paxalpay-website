@@ -101,7 +101,7 @@ export default function SupportedTokensTable({ onCalculate }: SupportedTokensTab
     };
 
     return (
-        <section className="py-16">
+        <section id="supported-tokens" className="py-16">
             <div className="max-w-[900px] mx-auto">
                 <div className="mb-6">
                     <div className="relative">

@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
 
 const rates = [
     {
@@ -26,15 +28,19 @@ export default function ExchangeRatesSection() {
                 <div>
                     <h2 className="text-center md:text-left text-[#262626] font-bold  text-[23px] md:text-[36px] leading-tight">
                         No Hidden Fees.
-                        <br className="md:hidden block"/>
+                        <br className="md:hidden block" />
                         Just Honest Numbers.
                     </h2>
                     <p className="hidden md:block mt-4 text-[#525252] font-medium text-[14px] md:text-[18px] leading-7">
                         We show our 1.5% fee upfront. Others hide it <br />in the exchange rate.
                     </p>
-                    <button className="hidden md:inline-flex mt-6 px-6 py-3 bg-blue-600 text-white rounded-[16px] font-bold text-[15px] hover:bg-blue-700 transition-colors">
+                    <Link 
+                        href="/rates#supported-tokens"
+                        scroll={true}
+                        className="hidden md:inline-flex mt-6 px-6 py-3 bg-blue-600 text-white rounded-[16px] font-bold text-[15px] hover:bg-blue-700 transition-colors"
+                    >
                         View Supported Tokens
-                    </button>
+                    </Link>
                 </div>
 
                 {/* Right side - Live rates */}
@@ -108,9 +114,13 @@ export default function ExchangeRatesSection() {
                         ))}
                     </div>
                     <div className="mt-6 md:hidden">
-                        <button className="w-full px-6 py-3 bg-blue-600 text-white rounded-[16px] font-bold text-[15px] hover:bg-blue-700 transition-colors">
+                        <Link 
+                            href="/rates#supported-tokens"
+                            scroll={true}
+                            className="w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-[16px] font-bold text-[15px] hover:bg-blue-700 transition-colors"
+                        >
                             View Supported Tokens
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>
