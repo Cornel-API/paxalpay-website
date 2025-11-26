@@ -39,7 +39,7 @@ export default function RatesHeroSection() {
 
     return (
         <>
-            <section className=" pt-28 relative left-1/2 -translate-x-1/2 w-screen py-16 min-h-[600px] bg-[#FCF7F1]">
+            <section className=" pt-28 relative -mx-[28px] w-[calc(100%+56px)] py-16 min-h-[600px] bg-[#FCF7F1]">
                 <div className="px-[28px] grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <div className="text-center md:text-left">
                         <FadeIn>

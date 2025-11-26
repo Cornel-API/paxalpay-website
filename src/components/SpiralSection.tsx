@@ -7,7 +7,7 @@ import FadeIn from "./animations/FadeIn";
 export default function SpiralSection() {
   return (
     <>
-      <section className="relative left-1/2 -translate-x-1/2 w-screen overflow-hidden">
+      <section className="relative -mx-[28px] w-[calc(100%+56px)] overflow-hidden">
         <div className="relative w-full h-[680px] md:hidden">
           <Image src="/Vector.png" alt="Spiral background" fill className="object-cover" priority />
 
