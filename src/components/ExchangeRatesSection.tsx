@@ -34,7 +34,7 @@ export default function ExchangeRatesSection() {
                     <p className="hidden md:block mt-4 text-[#525252] font-medium text-[14px] md:text-[18px] leading-7">
                         We show our 1.5% fee upfront. Others hide it <br />in the exchange rate.
                     </p>
-                    <Link 
+                    <Link
                         href="/rates#supported-tokens"
                         scroll={true}
                         className="hidden md:inline-flex mt-6 px-6 py-3 bg-blue-600 text-white rounded-[16px] font-bold text-[15px] hover:bg-blue-700 transition-colors"
@@ -114,7 +114,7 @@ export default function ExchangeRatesSection() {
                         ))}
                     </div>
                     <div className="mt-6 md:hidden">
-                        <Link 
+                        <Link
                             href="/rates#supported-tokens"
                             scroll={true}
                             className="w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-[16px] font-bold text-[15px] hover:bg-blue-700 transition-colors"

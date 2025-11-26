@@ -18,6 +18,8 @@ const tokens: Token[] = [
     { name: "Tether (USDT)", network: "Bitcoin Network", rate: "₦1,655.00", icon: "₮", iconBg: "#26A17B", code: "USDT" },
     { name: "Tether (USDT)", network: "Arbitrum", rate: "₦1,655.00", icon: "₮", iconBg: "#26A17B", code: "USDT" },
     { name: "Tether (USDT)", network: "Solana Network", rate: "₦1,655.00", icon: "₮", iconBg: "#26A17B", code: "USDT" },
+    { name: "USD Coin (USDC)", network: "ERC20", rate: "₦1,645.00", icon: "$", iconBg: "#2775CA", code: "USDC" },
+    { name: "USD Coin (USDC)", network: "Solana Network", rate: "₦1,645.00", icon: "$", iconBg: "#2775CA", code: "USDC" },
 ];
 
 const getNetworkBadge = (network: string) => {
@@ -88,16 +90,23 @@ interface SupportedTokensTableProps {
 
 export default function SupportedTokensTable({ onCalculate }: SupportedTokensTableProps) {
     const [searchTerm, setSearchTerm] = useState("");
+    const [visibleLimit, setVisibleLimit] = useState(6);
 
     const filteredTokens = tokens.filter(token =>
         token.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         token.network.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
+    const visibleTokens = filteredTokens.slice(0, visibleLimit);
+
     const handleCalculateClick = (token: Token) => {
         if (onCalculate) {
             onCalculate(token);
         }
+    };
+
+    const handleViewMore = () => {
+        setVisibleLimit(prev => prev + 2);
     };
 
     return (
@@ -136,8 +145,8 @@ export default function SupportedTokensTable({ onCalculate }: SupportedTokensTab
 
                     {/* Table Body */}
                     <div>
-                        {filteredTokens.length > 0 ? (
-                            filteredTokens.map((token, index) => (
+                        {visibleTokens.length > 0 ? (
+                            visibleTokens.map((token, index) => (
                                 <div
                                     key={index}
                                     className="grid grid-cols-2 md:grid-cols-4 gap-4  py-4"
@@ -187,11 +196,16 @@ export default function SupportedTokensTable({ onCalculate }: SupportedTokensTab
                     </div>
                 </div>
 
-                <div className="mt-6 text-center">
-                    <button className="text-[#1D78D3] text-[16px] font-semibold hover:underline">
-                        View all supported Tokens
-                    </button>
-                </div>
+                {filteredTokens.length > visibleLimit && (
+                    <div className="mt-6 text-center">
+                        <button
+                            onClick={handleViewMore}
+                            className="text-[#1D78D3] text-[16px] font-semibold hover:underline"
+                        >
+                            View all supported Tokens
+                        </button>
+                    </div>
+                )}
             </div>
         </section>
     );
