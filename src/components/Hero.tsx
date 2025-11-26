@@ -3,7 +3,7 @@ import StoreButton from "./StoreButton";
 
 export default function Hero() {
   return (
-    <section className="relative h-[960px] pt-26 pb-0 overflow-hidden background-[#FCF7F1] ">
+    <section className="relative h-[960px] pt-26 pb-0 overflow-hidden bg-[#FCF7F1] -mx-[28px]">
       <div className="flex flex-col items-center text-center">
         <h1 className="text-center font-extrabold md:text-[52px] text-[29px] text-[#262626] leading-tight">
           Skip the P2P Wait.
@@ -18,7 +18,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="- mx-[28px] pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-screen md:left-0 md:right-0 md:w-auto md:translate-x-0 flex justify-center">
+      <div className="px-6 pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-screen md:left-0 md:right-0 md:w-auto md:translate-x-0 flex justify-center">
         <Image
           src="/hero_image.png"
           alt="App preview"
