@@ -17,17 +17,15 @@ export default function Home() {
   return (
     <SplashScreen>
       <main className="">
-        {/* <div className="">
-          <Hero />
-        </div> */}
+        <Hero />
         <LicenseSection />
         <FeaturesStrip />
         <ThreeTapsSection />
         {/* <About /> */}
 
-        {/* <AutoTabs /> */}
-        {/* <ExchangeRatesSection /> */}
-        {/* <SupportSection /> */}
+        <AutoTabs />
+        <ExchangeRatesSection />
+        <SupportSection />
         <PeopleSection />
         <FAQSection />
         <SpiralSection />

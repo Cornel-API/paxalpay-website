@@ -4,7 +4,7 @@ import FadeIn from "./animations/FadeIn";
 
 export default function Hero() {
   return (
-    <section className=" px-6 relative h-[960px] pt-26 pb-0 overflow-hidden bg-[#FCF7F1] -mx-[28px]">
+    <section className=" px-6 relative h-[960px] pt-24 pb-0 overflow-hidden bg-[#FCF7F1] -mx-[28px]">
       <div className="flex flex-col items-center text-center">
         <FadeIn delay={0.1}>
           <h1 className="text-center font-extrabold md:text-[52px] text-[29px] text-[#262626] leading-tight">
@@ -25,7 +25,7 @@ export default function Hero() {
         </FadeIn>
       </div>
 
-      <div className=" pointer-events-none absolute bottom-0 left-0 w-full flex justify-center">
+      <div className=" pointer-events-none absolute bottom-0 left-0 w-full flex justify-center overflow-hidden">
         <FadeIn delay={0.4} direction="up" className="flex justify-center">
           <Image
             src="/hero_image.png"
