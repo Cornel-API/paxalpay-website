@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import FadeIn from "./animations/FadeIn";
 
 const tabs = [
   {
@@ -70,77 +71,83 @@ export default function AutoTabs() {
 
   return (
     <section className="py-16 flex flex-col items-center">
-      <div className="text-[#262626] font-bold  text-[23px] md:text-[32px] text-center">
-        The Easiest Way to Use
-        <br /> Crypto in Real Life
-      </div>
+      <FadeIn>
+        <div className="text-[#262626] font-bold  text-[23px] md:text-[32px] text-center">
+          The Easiest Way to Use
+          <br /> Crypto in Real Life
+        </div>
+      </FadeIn>
 
-      <div
-        ref={tabsWrapRef}
-        className="mt-6 w-full max-w-full flex items-end justify-start md:justify-center gap-8 flex-nowrap overflow-x-auto overscroll-x-contain scroll-smooth md:flex-wrap md:overflow-visible md:snap-x md:snap-mandatory"
-        role="tablist"
-        aria-label="Features"
-        style={{
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-          WebkitOverflowScrolling: "touch",
-        }}
-      >
+      <FadeIn delay={0.2} fullWidth>
+        <div
+          ref={tabsWrapRef}
+          className="mt-6 w-full max-w-full flex items-end justify-start md:justify-center gap-8 flex-nowrap overflow-x-auto overscroll-x-contain scroll-smooth md:flex-wrap md:overflow-visible md:snap-x md:snap-mandatory"
+          role="tablist"
+          aria-label="Features"
+          style={{
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+            WebkitOverflowScrolling: "touch",
+          }}
+        >
 
-        {tabs.map((t, i) => (
-          <button
-            key={t.label}
-            type="button"
-            onClick={() => setActive(i)}
-            ref={(el) => { buttonRefs.current[i] = el; }}
-            className={`relative pb-2 text-[15px] font-medium flex-shrink-0 snap-center ${i === active ? "text-blue-600" : "text-[#262626]"} ${i === 0 ? "pl-6 md:pl-0" : ""}`}
-            role="tab"
-            aria-selected={i === active}
-            aria-controls={`tab-panel-${i}`}
-          >
-            {t.label}
-            <span
-              className={`absolute ${i === 0 ? "left-6 md:left-0" : "left-0"} bottom-0 h-[6px] rounded-[6px] ${i === active ? "w-full bg-blue-600 tab-underline" : "w-full bg-zinc-200"}`}
-              style={i === active ? { animationDuration: `${DURATION_MS}ms` } : undefined}
-              id={`tab-underline-${i}`}
-            />
-          </button>
-        ))}
-        <div className="shrink-0 w-[40px]" aria-hidden="true" />
-      </div>
-
-      <div
-        className={`mt-8 w-full md:w-full md:max-w-[999px] h-auto md:h-[464px] min-h-[550px] md:min-h-0 rounded-[32px] overflow-hidden mx-auto relative ${tabs[active].layout === "side" ? "bg-[#FCF7F1] md:p-10" : "bg-zinc-100"
-          }`}
-      >
-        {tabs[active].layout === "background" ? (
-          // Tab 2: Background image layout
-          <div className="h-full min-h-[550px] md:min-h-0 overflow-hidden flex items-start justify-start relative" role="tabpanel" id={`tab-panel-${active}`} aria-labelledby={`tab-underline-${active}`} aria-live="polite">
-            <div className="absolute inset-0 z-0">
-              <Image
-                src={tabs[active].image}
-                alt=""
-                fill
-                className="object-cover"
+          {tabs.map((t, i) => (
+            <button
+              key={t.label}
+              type="button"
+              onClick={() => setActive(i)}
+              ref={(el) => { buttonRefs.current[i] = el; }}
+              className={`relative pb-2 text-[15px] font-medium flex-shrink-0 snap-center ${i === active ? "text-blue-600" : "text-[#262626]"} ${i === 0 ? "pl-6 md:pl-0" : ""}`}
+              role="tab"
+              aria-selected={i === active}
+              aria-controls={`tab-panel-${i}`}
+            >
+              {t.label}
+              <span
+                className={`absolute ${i === 0 ? "left-6 md:left-0" : "left-0"} bottom-0 h-[6px] rounded-[6px] ${i === active ? "w-full bg-blue-600 tab-underline" : "w-full bg-zinc-200"}`}
+                style={i === active ? { animationDuration: `${DURATION_MS}ms` } : undefined}
+                id={`tab-underline-${i}`}
               />
+            </button>
+          ))}
+          <div className="shrink-0 w-[40px]" aria-hidden="true" />
+        </div>
+      </FadeIn>
+
+      <FadeIn delay={0.4} fullWidth>
+        <div
+          className={`mt-8 w-full md:w-full md:max-w-[999px] h-auto md:h-[464px] min-h-[550px] md:min-h-0 rounded-[32px] overflow-hidden mx-auto relative ${tabs[active].layout === "side" ? "bg-[#FCF7F1] md:p-10" : "bg-zinc-100"
+            }`}
+        >
+          {tabs[active].layout === "background" ? (
+            // Tab 2: Background image layout
+            <div className="h-full min-h-[550px] md:min-h-0 overflow-hidden flex items-start justify-start relative" role="tabpanel" id={`tab-panel-${active}`} aria-labelledby={`tab-underline-${active}`} aria-live="polite">
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src={tabs[active].image}
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-left text-[#262626] text-[20px] leading-7 md:max-w-[447px] relative z-10 px-6 md:px-10 pt-6 md:pt-10">{tabs[active].content}</p>
             </div>
-            <p className="text-left text-[#262626] text-[20px] leading-7 md:max-w-[447px] relative z-10 px-6 md:px-10 pt-6 md:pt-10">{tabs[active].content}</p>
-          </div>
-        ) : (
-          // Tabs 1, 3, 4: Side-by-side layout
-          <div className="h-full overflow-hidden flex flex-col md:flex-row items-start justify-between gap-2 md:gap-6 md:px-0" role="tabpanel" id={`tab-panel-${active}`} aria-labelledby={`tab-underline-${active}`} aria-live="polite">
-            <p className="text-left text-[#262626] text-[20px] leading-7 md:max-w-[447px] flex-1 px-6 py-6 md:px-0">{tabs[active].content}</p>
-            <div className="relative w-full md:mx-0 md:w-[550px] h-[500px] md:h-full flex-shrink-0">
-              <Image
-                src={tabs[active].image}
-                alt=""
-                fill
-                className="object-cover md:object-contain"
-              />
+          ) : (
+            // Tabs 1, 3, 4: Side-by-side layout
+            <div className="h-full overflow-hidden flex flex-col md:flex-row items-start justify-between gap-2 md:gap-6 md:px-0" role="tabpanel" id={`tab-panel-${active}`} aria-labelledby={`tab-underline-${active}`} aria-live="polite">
+              <p className="text-left text-[#262626] text-[20px] leading-7 md:max-w-[447px] flex-1 px-6 py-6 md:px-0">{tabs[active].content}</p>
+              <div className="relative w-full md:mx-0 md:w-[550px] h-[500px] md:h-full flex-shrink-0">
+                <Image
+                  src={tabs[active].image}
+                  alt=""
+                  fill
+                  className="object-cover md:object-contain"
+                />
+              </div>
             </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      </FadeIn>
     </section>
   );
 }

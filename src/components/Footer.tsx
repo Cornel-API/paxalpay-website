@@ -1,4 +1,6 @@
 import Image from "next/image";
+import FadeIn from "./animations/FadeIn";
+import StaggerContainer from "./animations/StaggerContainer";
 
 export default function Footer() {
     return (
@@ -6,57 +8,67 @@ export default function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
                 {/* Logo + Copyright */}
                 <div className="md:col-span-4 text-left">
-                    <div className="flex justify-start items-center gap-2">
-                        <Image src="/logo.svg" alt="Paxalpay" width={203} height={39} />
-                    </div>
-                    <div className="mt-4 text-left text-[#525252] text-sm">
-                        © 2025 Paxalpay Technologies. All rights reserved.
-                    </div>
+                    <FadeIn>
+                        <div className="flex justify-start items-center gap-2">
+                            <Image src="/logo.svg" alt="Paxalpay" width={203} height={39} />
+                        </div>
+                        <div className="mt-4 text-left text-[#525252] text-sm">
+                            © 2025 Paxalpay Technologies. All rights reserved.
+                        </div>
+                    </FadeIn>
                 </div>
 
                 {/* Footer Links */}
-                <div className="md:col-span-8 flex flex-wrap justify-start gap-10 md:gap-32 mt-10 md:mt-0">
-                    <div className="min-w-[120px] text-left">
-                        <div className="text-[#737373] font-medium text-[15px] md:text-[18px] mb-3">Product</div>
-                        <div className="flex flex-col gap-3 text-[#262626] font-medium text-[15px] md:text-[18px]">
-                            <a href="#">Deposit Crypto</a>
-                            <a href="#">Bill Payments</a>
-                            <a href="#">Transfers</a>
-                            <a href="#">Live Rates</a>
-                            <a href="#">How It Works</a>
-                            <a href="#">Download App</a>
+                <StaggerContainer className="md:col-span-8 flex flex-wrap justify-start gap-10 md:gap-32 mt-10 md:mt-0" staggerChildren={0.1}>
+                    <FadeIn>
+                        <div className="min-w-[120px] text-left">
+                            <div className="text-[#737373] font-medium text-[15px] md:text-[18px] mb-3">Product</div>
+                            <div className="flex flex-col gap-3 text-[#262626] font-medium text-[15px] md:text-[18px]">
+                                <a href="#">Deposit Crypto</a>
+                                <a href="#">Bill Payments</a>
+                                <a href="#">Transfers</a>
+                                <a href="#">Live Rates</a>
+                                <a href="#">How It Works</a>
+                                <a href="#">Download App</a>
+                            </div>
                         </div>
-                    </div>
+                    </FadeIn>
 
-                    <div className="min-w-[120px] text-left">
-                        <div className="text-[#737373] font-medium text-[15px] md:text-[18px] mb-3">Support</div>
-                        <div className="flex flex-col gap-3 text-[#262626] font-medium text-[15px] md:text-[18px]">
-                            <a href="#">Help Center</a>
-                            <a href="#">Contact Support</a>
-                            <a href="#">FAQs</a>
+                    <FadeIn>
+                        <div className="min-w-[120px] text-left">
+                            <div className="text-[#737373] font-medium text-[15px] md:text-[18px] mb-3">Support</div>
+                            <div className="flex flex-col gap-3 text-[#262626] font-medium text-[15px] md:text-[18px]">
+                                <a href="#">Help Center</a>
+                                <a href="#">Contact Support</a>
+                                <a href="#">FAQs</a>
+                            </div>
                         </div>
-                    </div>
+                    </FadeIn>
 
-                    <div className="min-w-[120px] text-left">
-                        <div className="text-[#737373] font-medium text-[15px] md:text-[18px] mb-3">Company</div>
-                        <div className="flex flex-col gap-3 text-[#262626] font-medium text-[15px] md:text-[18px]">
-                            <a href="#">About Us</a>
-                            <a href="#">Careers</a>
-                            <a href="#">Blog</a>
-                            <a href="#">Press</a>
+                    <FadeIn>
+                        <div className="min-w-[120px] text-left">
+                            <div className="text-[#737373] font-medium text-[15px] md:text-[18px] mb-3">Company</div>
+                            <div className="flex flex-col gap-3 text-[#262626] font-medium text-[15px] md:text-[18px]">
+                                <a href="#">About Us</a>
+                                <a href="#">Careers</a>
+                                <a href="#">Blog</a>
+                                <a href="#">Press</a>
+                            </div>
                         </div>
-                    </div>
+                    </FadeIn>
 
-                    <div className="min-w-[120px] text-left">
-                        <div className="text-[#737373] font-medium text-[15px] md:text-[18px] mb-3">Legal</div>
-                        <div className="flex flex-col gap-3 text-[#262626] font-medium text-[15px] md:text-[18px]">
-                            <a href="#">Terms of Service</a>
-                            <a href="#">Privacy Policy</a>
-                            <a href="#">Compliance & Licenses</a>
-                            <a href="#">AML / KYC Policy</a>
+                    <FadeIn>
+                        <div className="min-w-[120px] text-left">
+                            <div className="text-[#737373] font-medium text-[15px] md:text-[18px] mb-3">Legal</div>
+                            <div className="flex flex-col gap-3 text-[#262626] font-medium text-[15px] md:text-[18px]">
+                                <a href="#">Terms of Service</a>
+                                <a href="#">Privacy Policy</a>
+                                <a href="#">Compliance & Licenses</a>
+                                <a href="#">AML / KYC Policy</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </FadeIn>
+                </StaggerContainer>
             </div>
 
             {/* Disclaimer */}

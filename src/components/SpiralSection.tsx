@@ -2,6 +2,7 @@ import Image from "next/image";
 import StoreButton from "./StoreButton";
 import FeatureRibbon from "./FeatureRibbon";
 import Footer from "./Footer";
+import FadeIn from "./animations/FadeIn";
 
 export default function SpiralSection() {
   return (
@@ -11,11 +12,15 @@ export default function SpiralSection() {
           <Image src="/Vector.png" alt="Spiral background" fill className="object-cover" priority />
 
           <div className="absolute top-8 inset-x-0 flex flex-col items-center gap-4">
-            <h2 className="text-center  font-bold text-[23px] md:text-[52px] text-[#262626]">Your money, moving the<br /> way you need it.</h2>
-            <div className="flex items-center gap-3">
-              <StoreButton platform="google" />
-              <StoreButton platform="apple" />
-            </div>
+            <FadeIn>
+              <h2 className="text-center  font-bold text-[23px] md:text-[52px] text-[#262626]">Your money, moving the<br /> way you need it.</h2>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <div className="flex items-center gap-3">
+                <StoreButton platform="google" />
+                <StoreButton platform="apple" />
+              </div>
+            </FadeIn>
           </div>
 
           <div className="absolute top-50 inset-x-0 flex justify-center gap-4">
@@ -32,11 +37,15 @@ export default function SpiralSection() {
           <Image src="/spiral.png" alt="Spiral background" fill className="object-cover" priority />
 
           <div className="absolute top-10 inset-x-0 flex flex-col items-center gap-4">
-            <h2 className="text-center font-extrabold text-[40px] text-[#262626]">Your money, moving the<br className="hidden md:block" /> way you need it.</h2>
-            <div className="flex items-center gap-4">
-              <StoreButton platform="google" />
-              <StoreButton platform="apple" />
-            </div>
+            <FadeIn>
+              <h2 className="text-center font-extrabold text-[40px] text-[#262626]">Your money, moving the<br className="hidden md:block" /> way you need it.</h2>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <div className="flex items-center gap-4">
+                <StoreButton platform="google" />
+                <StoreButton platform="apple" />
+              </div>
+            </FadeIn>
           </div>
 
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">

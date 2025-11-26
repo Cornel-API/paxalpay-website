@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import FadeIn from "./animations/FadeIn";
 
 const tabs = [
     { id: "deposit", label: "Deposit Crypto" },
@@ -77,22 +78,24 @@ export default function FeaturesTabsSection() {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-20">
                     {/* Left side - Sticky Tabs (hidden on mobile) */}
                     <div className="hidden md:block md:col-span-2">
-                        <div className="md:sticky md:top-24">
-                            <nav className="flex flex-col gap-2">
-                                {tabs.map((tab) => (
-                                    <button
-                                        key={tab.id}
-                                        onClick={() => scrollToSection(tab.id)}
-                                        className={`relative text-left px-2 py-3 rounded-lg transition-colors ${activeTab === tab.id
-                                            ? "text-[#1D78D3] font-semibold"
-                                            : "text-[#737373] hover:text-[#262626]"
-                                            }`}
-                                    >
-                                        <span className="text-[18px] font-medium md:font-semibold">{tab.label}</span>
-                                    </button>
-                                ))}
-                            </nav>
-                        </div>
+                        <FadeIn>
+                            <div className="md:sticky md:top-24">
+                                <nav className="flex flex-col gap-2">
+                                    {tabs.map((tab) => (
+                                        <button
+                                            key={tab.id}
+                                            onClick={() => scrollToSection(tab.id)}
+                                            className={`relative text-left px-2 py-3 rounded-lg transition-colors ${activeTab === tab.id
+                                                ? "text-[#1D78D3] font-semibold"
+                                                : "text-[#737373] hover:text-[#262626]"
+                                                }`}
+                                        >
+                                            <span className="text-[18px] font-medium md:font-semibold">{tab.label}</span>
+                                        </button>
+                                    ))}
+                                </nav>
+                            </div>
+                        </FadeIn>
                     </div>
 
                     {/* Right side - Scrollable Content */}
@@ -106,23 +109,25 @@ export default function FeaturesTabsSection() {
                                     }}
                                     className="min-h-[600px] mb-16 last:mb-0"
                                 >
-                                    <h2 className="text-[#262626] font-bold text-[23px] md:text-[36px] leading-tight mb-4">
-                                        {tabContent[tab.id as keyof typeof tabContent].title}
-                                    </h2>
-                                    <p className="text-[#737373] text-[14px] md:text-[20px] leading-8 mb-8 max-w-[600px]">
-                                        {tabContent[tab.id as keyof typeof tabContent].description}
-                                    </p>
-                                    <div
-                                        className="relative w-full max-w-[700px] h-[400px] md:h-[500px] rounded-[24px] overflow-hidden"
-                                        style={{ backgroundColor: tabContent[tab.id as keyof typeof tabContent].bgColor }}
-                                    >
-                                        <Image
-                                            src={tabContent[tab.id as keyof typeof tabContent].image}
-                                            alt={tabContent[tab.id as keyof typeof tabContent].title}
-                                            fill
-                                            className="object-contain p-8"
-                                        />
-                                    </div>
+                                    <FadeIn>
+                                        <h2 className="text-[#262626] font-bold text-[23px] md:text-[36px] leading-tight mb-4">
+                                            {tabContent[tab.id as keyof typeof tabContent].title}
+                                        </h2>
+                                        <p className="text-[#737373] text-[14px] md:text-[20px] leading-8 mb-8 max-w-[600px]">
+                                            {tabContent[tab.id as keyof typeof tabContent].description}
+                                        </p>
+                                        <div
+                                            className="relative w-full max-w-[700px] h-[400px] md:h-[500px] rounded-[24px] overflow-hidden"
+                                            style={{ backgroundColor: tabContent[tab.id as keyof typeof tabContent].bgColor }}
+                                        >
+                                            <Image
+                                                src={tabContent[tab.id as keyof typeof tabContent].image}
+                                                alt={tabContent[tab.id as keyof typeof tabContent].title}
+                                                fill
+                                                className="object-contain p-8"
+                                            />
+                                        </div>
+                                    </FadeIn>
                                 </div>
                             ))}
                         </div>

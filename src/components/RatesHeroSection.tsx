@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 import StoreButton from "./StoreButton";
 import RatesCalculator from "./RatesCalculator";
 import SupportedTokensTable from "./SupportedTokensTable";
+import FadeIn from "./animations/FadeIn";
 
 const currencies = [
     { code: "USDT", name: "USDT (TRC-20)", icon: "₮", color: "#26A17B" },
@@ -41,29 +42,37 @@ export default function RatesHeroSection() {
             <section className=" pt-28 relative left-1/2 -translate-x-1/2 w-screen py-16 min-h-[600px] bg-[#FCF7F1]">
                 <div className="px-[28px] grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <div className="text-center md:text-left">
-                        <h1 className="text-[#262626] font-bold text-[40px] md:text-[52px] leading-tight">
-                            Real-Time Rates.
-                            <br className="hidden md:block" />
-                            Zero Hidden Fees.
-                        </h1>
-                        <p className="mt-4 text-[#525252] font-medium text-[20px] leading-7">
-                            See exactly what your crypto is worth in Naira. Our rates are
-                            <br className="hidden md:block" />
-                            updated every 60 seconds to ensure you get the best market value.
-                        </p>
-                        <div className="mt-6 flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-2 w-full max-w-[360px]">
-                            <StoreButton platform="google" className="w-full justify-center" />
-                            <StoreButton platform="apple" className="w-full justify-center" />
-                        </div>
+                        <FadeIn>
+                            <h1 className="text-[#262626] font-bold text-[40px] md:text-[52px] leading-tight">
+                                Real-Time Rates.
+                                <br className="hidden md:block" />
+                                Zero Hidden Fees.
+                            </h1>
+                        </FadeIn>
+                        <FadeIn delay={0.1}>
+                            <p className="mt-4 text-[#525252] font-medium text-[20px] leading-7">
+                                See exactly what your crypto is worth in Naira. Our rates are
+                                <br className="hidden md:block" />
+                                updated every 60 seconds to ensure you get the best market value.
+                            </p>
+                        </FadeIn>
+                        <FadeIn delay={0.2}>
+                            <div className="mt-6 flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-2 w-full max-w-[360px]">
+                                <StoreButton platform="google" className="w-full justify-center" />
+                                <StoreButton platform="apple" className="w-full justify-center" />
+                            </div>
+                        </FadeIn>
                     </div>
 
-                    <div ref={calculatorRef}>
-                        <RatesCalculator
-                            className="w-full max-w-[500px] mx-auto md:ml-auto md:mr-0"
-                            initialCurrency={selectedCurrency}
-                            initialAmount={amount}
-                        />
-                    </div>
+                    <FadeIn delay={0.2} className="w-full">
+                        <div ref={calculatorRef}>
+                            <RatesCalculator
+                                className="w-full max-w-[500px] mx-auto md:ml-auto md:mr-0"
+                                initialCurrency={selectedCurrency}
+                                initialAmount={amount}
+                            />
+                        </div>
+                    </FadeIn>
                 </div>
             </section>
 

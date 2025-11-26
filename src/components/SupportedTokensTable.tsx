@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import FadeIn from "./animations/FadeIn";
+import StaggerContainer from "./animations/StaggerContainer";
 
 interface Token {
     name: string;
@@ -112,7 +114,7 @@ export default function SupportedTokensTable({ onCalculate }: SupportedTokensTab
     return (
         <section id="supported-tokens" className="py-16">
             <div className="max-w-[900px] mx-auto">
-                <div className="mb-6">
+                <FadeIn className="mb-6">
                     <div className="relative">
                         <svg
                             className="absolute left-4 top-1/2 -translate-y-1/2 text-[#A3A3A3]"
@@ -132,7 +134,7 @@ export default function SupportedTokensTable({ onCalculate }: SupportedTokensTab
                             className="w-full pl-12 pr-4 py-3 bg-[#F5F5F5] rounded-[12px] text-[15px] outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
-                </div>
+                </FadeIn>
 
                 <div className="bg-white rounded-[24px] overflow-hidden">
                     {/* Table Header */}
@@ -144,56 +146,57 @@ export default function SupportedTokensTable({ onCalculate }: SupportedTokensTab
                     </div>
 
                     {/* Table Body */}
-                    <div>
+                    <StaggerContainer staggerChildren={0.05}>
                         {visibleTokens.length > 0 ? (
                             visibleTokens.map((token, index) => (
-                                <div
-                                    key={index}
-                                    className="grid grid-cols-2 md:grid-cols-4 gap-4  py-4"
-                                >
-                                    <div className="flex items-center gap-3">
-                                        <div className="relative">
-                                            <div
-                                                className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
-                                                style={{ backgroundColor: token.iconBg }}
-                                            >
-                                                {token.icon}
-                                            </div>
-
-                                            {/* Dynamic Network Badge */}
-                                            {getNetworkBadge(token.network) && (
-                                                <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-white border-2 border-white flex items-center justify-center shadow-sm">
-                                                    {getNetworkBadge(token.network)}
+                                <FadeIn key={index} direction="up">
+                                    <div
+                                        className="grid grid-cols-2 md:grid-cols-4 gap-4  py-4"
+                                    >
+                                        <div className="flex items-center gap-3">
+                                            <div className="relative">
+                                                <div
+                                                    className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
+                                                    style={{ backgroundColor: token.iconBg }}
+                                                >
+                                                    {token.icon}
                                                 </div>
-                                            )}
+
+                                                {/* Dynamic Network Badge */}
+                                                {getNetworkBadge(token.network) && (
+                                                    <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-white border-2 border-white flex items-center justify-center shadow-sm">
+                                                        {getNetworkBadge(token.network)}
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <span className="text-[#262626] text-[14px] md:text-[18px] font-medium">{token.name}</span>
                                         </div>
-                                        <span className="text-[#262626] text-[14px] md:text-[18px] font-medium">{token.name}</span>
-                                    </div>
 
-                                    <div className="hidden md:flex items-center">
-                                        <span className="text-[#262626] text-[14px] md:text-[18px]">{token.network}</span>
-                                    </div>
+                                        <div className="hidden md:flex items-center">
+                                            <span className="text-[#262626] text-[14px] md:text-[18px]">{token.network}</span>
+                                        </div>
 
-                                    <div className="flex items-center justify-end md:justify-start">
-                                        <span className="text-[#262626] text-[14px] md:text-[18px] font-semibold">{token.rate}</span>
-                                    </div>
+                                        <div className="flex items-center justify-end md:justify-start">
+                                            <span className="text-[#262626] text-[14px] md:text-[18px] font-semibold">{token.rate}</span>
+                                        </div>
 
-                                    <div className="hidden md:flex items-center justify-end">
-                                        <button
-                                            onClick={() => handleCalculateClick(token)}
-                                            className="text-[#1D78D3] text-[15px] font-medium hover:underline"
-                                        >
-                                            Calculate
-                                        </button>
+                                        <div className="hidden md:flex items-center justify-end">
+                                            <button
+                                                onClick={() => handleCalculateClick(token)}
+                                                className="text-[#1D78D3] text-[15px] font-medium hover:underline"
+                                            >
+                                                Calculate
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
+                                </FadeIn>
                             ))
                         ) : (
                             <div className="px-6 py-8 text-center text-[#A3A3A3] text-[15px]">
                                 No tokens found
                             </div>
                         )}
-                    </div>
+                    </StaggerContainer>
                 </div>
 
                 {filteredTokens.length > visibleLimit && (
