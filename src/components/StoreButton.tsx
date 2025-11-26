@@ -18,7 +18,7 @@ export default function StoreButton({ platform, href = "#", className }: StoreBu
       <Image src={iconSrc} alt={alt} width={24} height={24} />
       <span className="ml-2 leading-tight ">
         <span className="block text-[7px] text-[#D2E25E]">{topLine}</span>
-        <span className="block text-[16px] text-[#D2E25E]">{bottomLine}</span>
+        <span className="block text-[14px] text-[#D2E25E]">{bottomLine}</span>
       </span>
     </a>
   );
