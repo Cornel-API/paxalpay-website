@@ -25,7 +25,7 @@ export default function Home() {
 
         {/* <AutoTabs /> */}
         <ExchangeRatesSection />
-        <SupportSection />
+        {/* <SupportSection /> */}
         <PeopleSection />
         <FAQSection />
         <SpiralSection />
