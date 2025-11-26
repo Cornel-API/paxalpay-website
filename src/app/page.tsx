@@ -17,7 +17,9 @@ export default function Home() {
   return (
     <SplashScreen>
       <main>
-        <Hero />
+        <div className="-mx-[10px] md:mx-0">
+          <Hero />
+        </div>
         <LicenseSection />
         <FeaturesStrip />
         <ThreeTapsSection />
