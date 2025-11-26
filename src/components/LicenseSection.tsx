@@ -4,7 +4,7 @@ import StaggerContainer from "./animations/StaggerContainer";
 
 export default function LicenseSection() {
     return (
-        <section className="py-12 md:py-16">
+        <section className="py-12 md:py-16 overflow-hidden">
             <StaggerContainer className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
                 <FadeIn direction="right">
                     <div className="flex-shrink-0">

@@ -24,7 +24,7 @@ const rates = [
 
 export default function ExchangeRatesSection() {
     return (
-        <section className="py-16">
+        <section className="py-16 overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                 {/* Left side - Text content */}
                 <FadeIn direction="right">

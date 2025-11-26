@@ -25,7 +25,7 @@ export default function Hero() {
         </FadeIn>
       </div>
 
-      <div className=" pointer-events-none absolute bottom-0 left-0 w-full flex justify-center">
+      <div className=" pointer-events-none absolute bottom-0 left-0 w-full flex justify-center overflow-hidden">
         <FadeIn delay={0.4} direction="up" className="flex justify-center">
           <Image
             src="/hero_image.png"
