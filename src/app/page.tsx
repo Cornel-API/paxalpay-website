@@ -16,7 +16,7 @@ import SplashScreen from "@/components/SplashScreen";
 export default function Home() {
   return (
     <SplashScreen>
-      <main className="-mr-[0px]">
+      <main className="">
         <div className="">
           <Hero />
         </div>

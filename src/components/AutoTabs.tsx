@@ -110,7 +110,7 @@ export default function AutoTabs() {
       </div>
 
       <div
-        className={`mt-8 w-full md:w-[999px] h-auto md:h-[464px] min-h-[550px] md:min-h-0 rounded-[32px] overflow-hidden mx-auto relative ${tabs[active].layout === "side" ? "bg-[#FCF7F1] md:p-10" : "bg-zinc-100"
+        className={`mt-8 w-full md:w-full md:max-w-[999px] h-auto md:h-[464px] min-h-[550px] md:min-h-0 rounded-[32px] overflow-hidden mx-auto relative ${tabs[active].layout === "side" ? "bg-[#FCF7F1] md:p-10" : "bg-zinc-100"
           }`}
       >
         {tabs[active].layout === "background" ? (
