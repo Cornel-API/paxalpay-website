@@ -17,9 +17,9 @@ export default function Home() {
   return (
     <SplashScreen>
       <main className="">
-        <div className="">
+        {/* <div className="">
           <Hero />
-        </div>
+        </div> */}
         <LicenseSection />
         <FeaturesStrip />
         <ThreeTapsSection />
