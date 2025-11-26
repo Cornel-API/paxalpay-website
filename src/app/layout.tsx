@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
-import SplashScreen from "@/components/SplashScreen";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,10 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased`}>
-        <SplashScreen>
-          <Header />
-          <div className="pt-16 px-[28px]">{children}</div>
-        </SplashScreen>
+        <Header />
+        <div className=" px-[28px]">{children}</div>
       </body>
     </html>
   );

@@ -1,26 +1,35 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const tabs = [
   {
     label: "Instant Crypto-to-Fiat Wallet Funding",
     content:
-      "Deposit USDT, USDC, BTC, ETH and more — we instantly convert it to your local currency so you can use it immediately for anything: transfers, bills, purchases, airtime",
+      "Deposit USDT, USDC, BTC, ETH and more. We instantly convert it to your local currency so you can use it immediately for anything: transfers, bills, purchases, airtime.",
+    image: "/tab1.png",
+    layout: "side", // text left, image right
   },
   {
     label: "Your Money Works Anywhere",
     content:
-      "Spend locally with ease. Your balance is ready for everyday transactions wherever you are.",
+      "Paxalpay offers transaction speed and reliability. Send to any bank account, Transfer to friends, Pay merchants, Spend as normal",
+    image: "/tab2.png",
+    layout: "background", // image as background
   },
   {
     label: "Everyday Bills Paid in Seconds",
     content:
-      "Pay utilities, airtime, subscriptions and more, all within seconds from your wallet.",
+      "Use your converted balance to handle the essentials: Airtime & data, Internet subscriptions, Electricity, TV services and many more. Paxalpay makes your crypto useful in your day-to-day life.",
+    image: "/tab3.png",
+    layout: "side", // text left, image right
   },
   {
     label: "Built for Speed and Security",
     content:
-      "Fast settlements and modern security practices keep your funds and data protected.",
+      "Bank-grade encryption, transaction PIN, device verification and anti-fraud monitoring ensure every operation is protected. Your funds, identity and actions remain secure at every step.",
+    image: "/tab4.svg",
+    layout: "side", // text left, image right
   },
 ];
 
@@ -60,17 +69,22 @@ export default function AutoTabs() {
   }, [active]);
 
   return (
-    <section className="py-16">
-      <div className="text-[#262626] font-bold font-[700] text-[23px] md:text-[32px]">
+    <section className="py-16 flex flex-col items-center">
+      <div className="text-[#262626] font-bold  text-[23px] md:text-[32px] text-center">
         The Easiest Way to Use
         <br /> Crypto in Real Life
       </div>
 
       <div
         ref={tabsWrapRef}
-        className="mt-6 flex items-end gap-8 flex-nowrap overflow-x-auto overscroll-x-contain scroll-smooth md:flex-wrap md:overflow-visible md:snap-x md:snap-mandatory"
+        className="mt-6 flex items-end justify-start md:justify-center gap-8 flex-nowrap overflow-x-auto overscroll-x-contain scroll-smooth md:flex-wrap md:overflow-visible md:snap-x md:snap-mandatory"
         role="tablist"
         aria-label="Features"
+        style={{
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+          WebkitOverflowScrolling: "touch",
+        }}
       >
 
         {tabs.map((t, i) => (
@@ -79,14 +93,14 @@ export default function AutoTabs() {
             type="button"
             onClick={() => setActive(i)}
             ref={(el) => { buttonRefs.current[i] = el; }}
-            className={`relative pb-2 text-[15px] font-[500] font-medium flex-shrink-0 snap-center ${i === active ? "text-blue-600" : "text-[#262626]"}`}
+            className={`relative pb-2 text-[15px] font-medium flex-shrink-0 snap-center ${i === active ? "text-blue-600" : "text-[#262626]"} ${i === 0 ? "pl-6 md:pl-0" : ""}`}
             role="tab"
             aria-selected={i === active}
             aria-controls={`tab-panel-${i}`}
           >
             {t.label}
             <span
-              className={`absolute left-0 bottom-0 h-[6px] rounded-[6px] ${i === active ? "w-full bg-blue-600 tab-underline" : "w-full bg-zinc-200"}`}
+              className={`absolute ${i === 0 ? "left-6 md:left-0" : "left-0"} bottom-0 h-[6px] rounded-[6px] ${i === active ? "w-full bg-blue-600 tab-underline" : "w-full bg-zinc-200"}`}
               style={i === active ? { animationDuration: `${DURATION_MS}ms` } : undefined}
               id={`tab-underline-${i}`}
             />
@@ -95,10 +109,37 @@ export default function AutoTabs() {
         <div className="shrink-0 w-[40px]" aria-hidden="true" />
       </div>
 
-      <div className="mt-8 w-full md:w-[899px] h-auto md:h-[464px] rounded-[32px] bg-zinc-100 p-6 md:p-10 overflow-hidden">
-        <div className="h-full overflow-hidden flex items-start" role="tabpanel" id={`tab-panel-${active}`} aria-labelledby={`tab-underline-${active}`} aria-live="polite">
-          <p className="text-left text-[#262626] text-[20px]  leading-9 md:max-w-[447px] pt-0 md:pt-28">{tabs[active].content}</p>
-        </div>
+      <div
+        className={`mt-8 w-full md:w-[999px] h-auto md:h-[464px] min-h-[550px] md:min-h-0 rounded-[32px] overflow-hidden mx-auto relative ${tabs[active].layout === "side" ? "bg-[#FCF7F1] md:p-10" : "bg-zinc-100"
+          }`}
+      >
+        {tabs[active].layout === "background" ? (
+          // Tab 2: Background image layout
+          <div className="h-full min-h-[550px] md:min-h-0 overflow-hidden flex items-start justify-start relative" role="tabpanel" id={`tab-panel-${active}`} aria-labelledby={`tab-underline-${active}`} aria-live="polite">
+            <div className="absolute inset-0 z-0">
+              <Image
+                src={tabs[active].image}
+                alt=""
+                fill
+                className="object-cover"
+              />
+            </div>
+            <p className="text-left text-[#262626] text-[20px] leading-7 md:max-w-[447px] relative z-10 px-6 md:px-10 pt-6 md:pt-10">{tabs[active].content}</p>
+          </div>
+        ) : (
+          // Tabs 1, 3, 4: Side-by-side layout
+          <div className="h-full overflow-hidden flex flex-col md:flex-row items-start justify-between gap-2 md:gap-6 md:px-0" role="tabpanel" id={`tab-panel-${active}`} aria-labelledby={`tab-underline-${active}`} aria-live="polite">
+            <p className="text-left text-[#262626] text-[20px] leading-7 md:max-w-[447px] flex-1 px-6 py-6 md:px-0">{tabs[active].content}</p>
+            <div className="relative w-[120%] md:mx-0 md:w-[550px] h-[500px] md:h-full flex-shrink-0">
+              <Image
+                src={tabs[active].image}
+                alt=""
+                fill
+                className="object-cover md:object-contain"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

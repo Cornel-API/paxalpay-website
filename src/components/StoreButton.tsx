@@ -14,7 +14,7 @@ export default function StoreButton({ platform, href = "#", className }: StoreBu
   const bottomLine = isGoogle ? "Google Play" : "App Store";
 
   return (
-    <a href={href} className={("inline-flex items-center rounded-[16px] bg-black px-4 py-2 text-white " + (className ?? "")).trim()}>
+    <a href={href} className={("inline-flex items-center rounded-[16px] bg-black px-3 py-2 text-white " + (className ?? "")).trim()}>
       <Image src={iconSrc} alt={alt} width={24} height={24} />
       <span className="ml-2 leading-tight ">
         <span className="block text-[7px] text-[#D2E25E]">{topLine}</span>

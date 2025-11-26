@@ -7,25 +7,32 @@ import PeopleSection from "@/components/PeopleSection";
 import FeaturesStrip from "@/components/FeaturesStrip";
 import FAQSection from "@/components/FAQSection";
 import SpiralSection from "@/components/SpiralSection";
+import LicenseSection from "@/components/LicenseSection";
+import ThreeTapsSection from "@/components/ThreeTapsSection";
+import ExchangeRatesSection from "@/components/ExchangeRatesSection";
+import LogoBanner from "@/components/LogoBanner";
+import SplashScreen from "@/components/SplashScreen";
 
 export default function Home() {
   return (
-    <main>
-      <div className="-mx-[28px] md:mx-0">
-        <Hero />
-      </div>
-      <About />
-      <AutoTabs />
-      <SupportSection />
-      <PeopleSection />
-      <FeaturesStrip />
-      <FAQSection />
-      <SpiralSection />
-      <section className="relative left-1/2 -translate-x-1/2 w-screen py-16 flex justify-center bg-[#1D78D3]">
-        <div className="relative w-full max-w-[1024px] h-[352px]">
-          <Image src="/logo_big.svg" alt="Paxalpay" fill className="object-contain" />
+    <SplashScreen>
+      <main>
+        <div className="-mx-[28px] md:mx-0">
+          <Hero />
         </div>
-      </section>
-    </main>
+        <LicenseSection />
+        <FeaturesStrip />
+        <ThreeTapsSection />
+        {/* <About /> */}
+
+        <AutoTabs />
+        <ExchangeRatesSection />
+        <SupportSection />
+        <PeopleSection />
+        <FAQSection />
+        <SpiralSection />
+        <LogoBanner />
+      </main>
+    </SplashScreen>
   );
 }

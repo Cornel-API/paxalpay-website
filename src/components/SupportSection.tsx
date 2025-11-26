@@ -16,11 +16,11 @@ export default function SupportSection() {
   return (
     <section className="pt-20">
       <div className="text-left md:text-center">
-        <h2 className="text-[#262626] font-[700] font-bold text-[23px] md:text-[32px]">
+        <h2 className="text-[#262626] font-bold text-[23px] md:text-[32px]">
           We Support the Tokens You
           <br /> Already Use
         </h2>
-        <p className="mt-3 text-[#525252] font-[500] font-medium text-[15px] md:text-[18px]">
+        <p className="mt-3 text-[#525252] font-medium text-[15px] md:text-[18px]">
           We support the most widely used digital assets so
           <br /> you can fund your wallet effortlessly.
         </p>
@@ -33,8 +33,8 @@ export default function SupportSection() {
         </div>
       </div>
 
-      <div className="mt-6 md:-mt-16 text-center font-[500] font-medium text-[#525252] text-[15px] md:text-[18px]">
-        Secured, audited, and backed by industry- <br/> standard infrastructure.
+      <div className="mt-6 md:-mt-16 text-center font-medium text-[#525252] text-[15px] md:text-[18px]">
+        Secured, audited, and backed by industry<br /> standard infrastructure.
       </div>
 
       <div className="mt-6 flex items-center justify-center gap-4">

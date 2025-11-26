@@ -12,19 +12,28 @@ export default function SplashScreen({ children }: Props) {
   const [fullData, setFullData] = useState<unknown>(null);
 
   useEffect(() => {
+    // Check if user has seen the splash screen before
+    const hasSeenSplash = localStorage.getItem("hasSeenSplash");
+
+    if (hasSeenSplash) {
+      // Skip splash screen for returning visitors
+      setHidden(true);
+      return;
+    }
+
     let mounted = true;
     fetch("/motion/logo_loading_animation_blue.json")
       .then((r) => r.json())
       .then((d) => {
         if (mounted) setBlueData(d);
       })
-      .catch(() => {});
+      .catch(() => { });
     fetch("/motion/Artboard.json")
       .then((r) => r.json())
       .then((d) => {
         if (mounted) setFullData(d);
       })
-      .catch(() => {});
+      .catch(() => { });
 
     const handleLoad = () => {
       setLoaded(true);
@@ -46,6 +55,12 @@ export default function SplashScreen({ children }: Props) {
     };
   }, []);
 
+  // Mark splash as seen when animation completes
+  const handleAnimationComplete = () => {
+    setHidden(true);
+    localStorage.setItem("hasSeenSplash", "true");
+  };
+
   return (
     <>
       {!hidden && (
@@ -55,7 +70,7 @@ export default function SplashScreen({ children }: Props) {
               animationData={fullData}
               loop={false}
               autoplay
-              onComplete={() => setHidden(true)}
+              onComplete={handleAnimationComplete}
               style={{ width: 500, height: 500 }}
             />
           ) : blueData ? (
@@ -63,7 +78,7 @@ export default function SplashScreen({ children }: Props) {
               animationData={blueData}
               loop={!playFinal}
               autoplay
-              style={{ width: 80, height: 80, marginTop:"-20px" }}
+              style={{ width: 80, height: 80, marginTop: "-20px" }}
             />
           ) : null}
         </div>

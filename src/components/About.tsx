@@ -8,11 +8,11 @@ export default function About() {
     <section className="py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-x-0 gap-y-10">
         <div>
-          <div className="font-medium font-[500] text-[15px] text-[#525252]">What is Paxalpay About?</div>
+          <div className="font-medium text-[15px] text-[#525252]">What is Paxalpay About?</div>
         </div>
 
         <div className="justify-self-end w-full md:w-auto">
-          <h2 className="text-[#262626] font-bold font-[700] text-[23px] md:text-[32px]">
+          <h2 className="text-[#262626] font-bold  text-[23px] md:text-[32px]">
             Your Bridge Between Crypto and Daily Life
           </h2>
           <p className="mt-3 text-[#525252] text-[16px] md:text-[23px] leading-10">
@@ -24,7 +24,7 @@ export default function About() {
         </div>
 
         <div className="self-end justify-self-start text-left pb-8 md:pb-12">
-          <h3 className="text-[#262626] font-bold font-[700] text-[23px] md:text-[36px]">
+          <h3 className="text-[#262626] font-bold  text-[23px] md:text-[36px]">
             Built for Real People,
             <br /> Moving Real Value
           </h3>
