@@ -51,9 +51,11 @@ export default function SupportSection() {
         </div>
       </FadeIn>
 
-      <div className="mt-12">
-        <FeatureRibbon items={features} />
-      </div>
+      <FadeIn delay={0.5}>
+        <div className="mt-12">
+          <FeatureRibbon items={features} />
+        </div>
+      </FadeIn>
     </section>
   );
 }

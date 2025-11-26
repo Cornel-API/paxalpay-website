@@ -70,7 +70,7 @@ export default function AutoTabs() {
   }, [active]);
 
   return (
-    <section className="py-16 flex flex-col items-center w-full overflow-hidden">
+    <section className="py-16 flex flex-col items-center">
       <FadeIn>
         <div className="text-[#262626] font-bold  text-[23px] md:text-[32px] text-center">
           The Easiest Way to Use

@@ -10,7 +10,7 @@ type FeatureRibbonProps = {
 
 export default function FeatureRibbon({ items, iconSrc = "/flag.svg", className }: FeatureRibbonProps) {
   return (
-    <FadeIn className={("relative -mx-[28px] w-[calc(100%+56px)] overflow-hidden " + (className ?? "")).trim()}>
+    <FadeIn className={("relative left-1/2 -translate-x-1/2 w-screen overflow-hidden " + (className ?? "")).trim()}>
       <div className="bg-black px-2 py-4">
         <div className="overflow-hidden">
           <div className="marquee-left flex">

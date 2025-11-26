@@ -3,7 +3,7 @@ import FadeIn from "./animations/FadeIn";
 
 export default function PeopleSection() {
   return (
-    <section className="relative -mx-[28px] w-[calc(100%+56px)] overflow-hidden">
+    <section className="relative left-1/2 -translate-x-1/2 w-screen overflow-hidden">
       <div className="relative w-full h-[976px] pt-30">
         <Image src="/people.png" alt="Real people using Paxalpay" fill className="object-cover" priority />
 

@@ -38,7 +38,7 @@ export default function FadeIn({
             transition: {
                 duration: duration,
                 delay: delay,
-                ease: [0.25, 0.25, 0.25, 0.75] as [number, number, number, number],
+                ease: [0.25, 0.25, 0.25, 0.75],
             },
         },
     };
@@ -50,7 +50,7 @@ export default function FadeIn({
             animate={isInView ? "visible" : "hidden"}
             variants={variants}
             className={className}
-            style={{ width: fullWidth ? "100%" : undefined }}
+            style={{ width: fullWidth ? "100%" : "auto" }}
         >
             {children}
         </motion.div>
