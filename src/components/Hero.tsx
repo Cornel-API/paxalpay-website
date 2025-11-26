@@ -18,7 +18,7 @@ export default function Hero() {
           </p>
         </FadeIn>
         <FadeIn delay={0.3}>
-          <div className="mt-6 flex flex-col md:flex-row items-center md:items-center gap-3 md:gap-2 w-full max-w-[360px]">
+          <div className="mt-6 flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-2 w-full max-w-[360px]">
             <StoreButton platform="google" className="w-full justify-center" />
             <StoreButton platform="apple" className="w-full justify-center" />
           </div>
