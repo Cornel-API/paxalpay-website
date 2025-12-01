@@ -8,7 +8,7 @@ import LogoBanner from "../../components/LogoBanner";
 export default function RatesPage() {
     return (
         <main>
-            <Header />
+
             <RatesHeroSection />
             <GlobalAmbitionSection />
             <PeopleSection />

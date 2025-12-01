@@ -9,7 +9,7 @@ import LogoBanner from "@/components/LogoBanner";
 export default function FeaturesPage() {
     return (
         <main>
-            <Header />
+
             <FeaturesHeroSection />
             <FeaturesTabsSection />
             <FeatureRibbon

@@ -55,11 +55,11 @@ export default function Header({
   return (
     <header
       className={
-        "fixed inset-x-0 top-0 z-50 bg-white/0 backdrop-blur " +
+        "absolute inset-x-0 top-0 z-50 bg-white/0 backdrop-blur " +
         (className ?? "")
       }
     >
-      <div className="flex w-full items-center justify-between px-[28px] pr-[18px] md:pr-[28px] py-3">
+      <div className="max-w-[1740px] mx-auto flex w-full items-center justify-between px-[28px] pr-[18px] md:pr-[28px] py-3">
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2" aria-label="Home">
             <Image src="/logo.svg" alt="Paxalpay logo" width={112} height={28} priority />

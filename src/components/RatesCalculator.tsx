@@ -54,13 +54,13 @@ export default function RatesCalculator({ className, initialCurrency, initialAmo
 
     return (
         <div className={className}>
-            <div className="rounded-[32px] border-[6px] border-[#D2E25E] bg-[#D2E25E] p-2 max-h-[380px]">
-                <div className="rounded-[24px] bg-white p-4 mb-2">
+            <div className="rounded-[36px] border-[6px] border-[#D2E25E] bg-[#D2E25E] p-1 max-h-[380px]">
+                <div className="rounded-[32px] bg-white p-4 mb-2">
                     <div className="relative inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#F5F5F5] mb-3">
                         <span className="text-[#A3A3A3] text-[14px] font-medium">You send</span>
                         <button
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                            className="flex items-center gap-2 text-[#262626] text-[16px] font-semibold"
+                            className="flex items-center gap-2 text-[#262626] text-[16px] font-medium"
                         >
                             {selectedCurrency.name}
                             <svg
@@ -122,7 +122,7 @@ export default function RatesCalculator({ className, initialCurrency, initialAmo
                             value={sendAmount}
                             onChange={(e) => handleSendAmountChange(e.target.value)}
                             min="0"
-                            className="bg-transparent text-[40px] font-bold text-[#262626] outline-none w-full"
+                            className="bg-transparent text-[32px] text-[#262626] outline-none w-full font-medium"
                             placeholder="0"
                         />
                         <div className="flex items-center gap-3 ml-4 flex-shrink-0">
@@ -142,7 +142,7 @@ export default function RatesCalculator({ className, initialCurrency, initialAmo
                 <div className="rounded-[24px] bg-white p-4">
                     <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#F5F5F5] mb-3">
                         <span className="text-[#A3A3A3] text-[14px] font-medium">Receive</span>
-                        <span className="text-[#262626] text-[16px] font-semibold">
+                        <span className="text-[#262626] text-[16px] font-medium">
                             Nigerian Naira
                         </span>
                     </div>
@@ -153,7 +153,7 @@ export default function RatesCalculator({ className, initialCurrency, initialAmo
                             value={receiveAmount}
                             readOnly
                             min="0"
-                            className="bg-transparent text-[40px] font-bold text-[#262626] outline-none w-full"
+                            className="bg-transparent text-[32px] font-medium text-[#737373] outline-none w-full"
                             placeholder="0"
                         />
                         <div className="flex items-center gap-3 ml-4 flex-shrink-0">
@@ -191,13 +191,13 @@ export default function RatesCalculator({ className, initialCurrency, initialAmo
                     </div>
                     <div>
                         <div className="text-[#A3A3A3] text-[12px] font-medium">Rate</div>
-                        <div className="text-[#262626] text-[16px] font-semibold">
+                        <div className="text-[#262626] text-[16px] font-medium">
                             {selectedCurrency.code} → {receiveCurrency}
                         </div>
                     </div>
                 </div>
                 <div className="text-right">
-                    <div className="text-[#262626] text-[20px] font-bold">
+                    <div className="text-[#262626] text-[20px] font-medium">
                         ₦{rate}/{selectedCurrency.code}
                     </div>
                     <div className="text-[#7C3AED] text-[13px] font-medium">

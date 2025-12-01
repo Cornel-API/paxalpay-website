@@ -85,7 +85,7 @@ export default function FeaturesTabsSection() {
                                         <button
                                             key={tab.id}
                                             onClick={() => scrollToSection(tab.id)}
-                                            className={`relative text-left px-2 py-3 rounded-lg transition-colors ${activeTab === tab.id
+                                            className={`relative text-left px-2 py-1 transition-colors ${activeTab === tab.id
                                                 ? "text-[#1D78D3] font-medium"
                                                 : "text-[#A3A3A3] hover:text-[#262626]"
                                                 }`}
