@@ -43,7 +43,7 @@ export default function RatesHeroSection() {
                 <div className="px-[28px] grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <div className="text-center md:text-left">
                         <FadeIn>
-                            <h1 className="text-[#262626] font-bold text-[40px] md:text-[52px] leading-tight">
+                            <h1 className="text-[#262626] font-bold text-[40px] md:text-[52px] leading-none">
                                 Real-Time Rates.
                                 <br className="hidden md:block" />
                                 Zero Hidden Fees.

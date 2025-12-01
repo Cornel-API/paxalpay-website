@@ -7,7 +7,7 @@ export default function Hero() {
     <section className=" relative h-[960px] pt-26 pb-0 overflow-hidden bg-[#FCF7F1] -mx-[28px]">
       <div className="flex flex-col items-center text-center">
         <FadeIn delay={0.1}>
-          <h1 className="text-center font-extrabold md:text-[52px] text-[29px] text-[#262626] leading-tight">
+          <h1 className="text-center font-semibold md:text-[52px] text-[29px] text-[#262626] leading-none tracking-tighter">
             Skip the P2P Wait.
             <br className="hidden md:block" /> Spend Your Crypto Instantly.
           </h1>

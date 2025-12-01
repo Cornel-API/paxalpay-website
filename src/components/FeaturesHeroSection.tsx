@@ -10,7 +10,7 @@ export default function FeaturesHeroSection() {
                     {/* Left side - Text content */}
                     <div className="text-center md:text-left">
                         <FadeIn>
-                            <h1 className="text-[#262626] font-bold text-[29px] md:text-[52px] leading-tight mb-6">
+                            <h1 className="text-[#262626] font-bold text-[29px] md:text-[52px] leading-none mb-6">
                                 More Than a Wallet.
                                 <br className="hidden md:block" />
                                 A Complete Financial Bridge.
@@ -23,7 +23,7 @@ export default function FeaturesHeroSection() {
                             </p>
                         </FadeIn>
                         <FadeIn delay={0.2}>
-                            <div className="mt-6 flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-2 w-full max-w-[360px]">
+                            <div className="mt-6 flex flex-col md:flex-row md:items-center gap-3 md:gap-2 w-full max-w-[360px]">
                                 <StoreButton platform="google" className="w-full justify-center" />
                                 <StoreButton platform="apple" className="w-full justify-center" />
                             </div>

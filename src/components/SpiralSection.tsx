@@ -9,11 +9,9 @@ export default function SpiralSection() {
     <>
       <section className="relative -mx-[28px] w-[calc(100%+56px)] overflow-hidden">
         <div className="relative w-full h-[680px] md:hidden">
-          <Image src="/Vector.png" alt="Spiral background" fill className="object-cover" priority />
-
           <div className="absolute top-8 inset-x-0 flex flex-col items-center gap-4">
             <FadeIn>
-              <h2 className="text-center  font-bold text-[23px] md:text-[52px] text-[#262626]">Your money, moving the<br /> way you need it.</h2>
+              <h2 className="text-center font-bold text-[23px] md:text-[52px] text-[#262626] leading-none">Your money, moving the<br /> way you need it.</h2>
             </FadeIn>
             <FadeIn delay={0.2}>
               <div className="flex items-center gap-3">
@@ -34,11 +32,9 @@ export default function SpiralSection() {
         </div>
 
         <div className="relative w-full h-[820px] hidden md:block">
-          <Image src="/spiral.png" alt="Spiral background" fill className="object-cover" priority />
-
           <div className="absolute top-10 inset-x-0 flex flex-col items-center gap-4">
             <FadeIn>
-              <h2 className="text-center font-extrabold text-[40px] text-[#262626]">Your money, moving the<br className="hidden md:block" /> way you need it.</h2>
+              <h2 className="text-center font-bold text-[40px] text-[#262626] leading-tight tracking-tighter">Your money, moving the<br className="hidden md:block" /> way you need it.</h2>
             </FadeIn>
             <FadeIn delay={0.2}>
               <div className="flex items-center gap-4">

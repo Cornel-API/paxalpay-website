@@ -78,24 +78,24 @@ export default function FeaturesTabsSection() {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-20">
                     {/* Left side - Sticky Tabs (hidden on mobile) */}
                     <div className="hidden md:block md:col-span-2">
-                        <FadeIn>
-                            <div className="md:sticky md:top-24">
+                        <div className="md:sticky md:top-24">
+                            <FadeIn>
                                 <nav className="flex flex-col gap-2">
                                     {tabs.map((tab) => (
                                         <button
                                             key={tab.id}
                                             onClick={() => scrollToSection(tab.id)}
                                             className={`relative text-left px-2 py-3 rounded-lg transition-colors ${activeTab === tab.id
-                                                ? "text-[#1D78D3] font-semibold"
-                                                : "text-[#737373] hover:text-[#262626]"
+                                                ? "text-[#1D78D3] font-medium"
+                                                : "text-[#A3A3A3] hover:text-[#262626]"
                                                 }`}
                                         >
-                                            <span className="text-[18px] font-medium md:font-semibold">{tab.label}</span>
+                                            <span className="text-[18px] font-medium md:font-semibold whitespace-nowrap">{tab.label}</span>
                                         </button>
                                     ))}
                                 </nav>
-                            </div>
-                        </FadeIn>
+                            </FadeIn>
+                        </div>
                     </div>
 
                     {/* Right side - Scrollable Content */}
@@ -110,7 +110,7 @@ export default function FeaturesTabsSection() {
                                     className="min-h-[600px] mb-16 last:mb-0"
                                 >
                                     <FadeIn>
-                                        <h2 className="text-[#262626] font-bold text-[23px] md:text-[36px] leading-tight mb-4">
+                                        <h2 className="text-[#262626] font-bold text-[23px] md:text-[36px] leading-none mb-4">
                                             {tabContent[tab.id as keyof typeof tabContent].title}
                                         </h2>
                                         <p className="text-[#737373] text-[14px] md:text-[20px] leading-8 mb-8 max-w-[600px]">

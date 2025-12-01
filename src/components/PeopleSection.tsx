@@ -10,7 +10,7 @@ export default function PeopleSection() {
         <div className="absolute inset-0 h-full flex flex-col justify-between md:flex-row md:items-end md:justify-between md:pb-18 px-[16px] md:px-[28px] pb-8 gap-6">
           <div className="max-w-[520px] text-white">
             <FadeIn>
-              <h2 className=" font-bold text-[32px] mt-8 md:text-[52px] leading-tight">
+              <h2 className=" font-bold text-[32px] mt-8 md:text-[52px] leading-none">
                 A better money
                 <br className="hidden md:block" /> experience, built for
                 <br className="hidden md:block" /> real people.

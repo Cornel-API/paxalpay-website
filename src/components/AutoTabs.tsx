@@ -72,9 +72,9 @@ export default function AutoTabs() {
   return (
     <section className="py-16 flex flex-col items-center overflow-hidden">
       <FadeIn>
-        <div className="text-[#262626] font-bold  text-[23px] md:text-[32px] text-center">
-          The Easiest Way to Use
-          <br /> Crypto in Real Life
+        <div className="text-[#262626] font-bold  text-[23px] md:text-[32px] text-center leading-tight">
+          Why people are
+          <br /> Switching to PaxalPay
         </div>
       </FadeIn>
 
@@ -97,7 +97,7 @@ export default function AutoTabs() {
               type="button"
               onClick={() => setActive(i)}
               ref={(el) => { buttonRefs.current[i] = el; }}
-              className={`relative pb-2 text-[15px] font-medium flex-shrink-0 snap-center ${i === active ? "text-blue-600" : "text-[#262626]"} ${i === 0 ? "pl-6 md:pl-0" : ""}`}
+              className={`relative pb-2 text-[15px] font-medium flex-shrink-0 snap-center ${i === active ? "text-blue-600" : "text-[#737373]"} ${i === 0 ? "pl-6 md:pl-0" : ""}`}
               role="tab"
               aria-selected={i === active}
               aria-controls={`tab-panel-${i}`}

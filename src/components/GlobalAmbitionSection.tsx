@@ -11,7 +11,7 @@ export default function GlobalAmbitionSection() {
                         {/* Left side - Text content */}
                         <div className="self-start">
                             <FadeIn>
-                                <h2 className="text-[#262626] font-bold text-[23px] md:text-[36px] leading-tight mb-6">
+                                <h2 className="text-[#262626] font-bold text-[23px] md:text-[36px] leading-none mb-6">
                                     Local Settlement. Global Ambition.
                                 </h2>
                             </FadeIn>

@@ -15,14 +15,14 @@ const features = [
 
 export default function SupportSection() {
   return (
-    <section className="pt-20">
+    <section className="pt-20 bg-gradient-to-b from-[#FFFFFF] to-[#FCF7F1]">
       <FadeIn>
         <div className="text-left md:text-center">
-          <h2 className="text-[#262626] font-bold text-[23px] md:text-[32px]">
-            We Support the Tokens You
-            <br /> Already Use
+          <h2 className="text-[#262626] font-bold text-[23px] md:text-[32px] leading-tight">
+            We Support the Tokens
+            <br /> You Already Use
           </h2>
-          <p className="mt-3 text-[#525252] font-medium text-[15px] md:text-[18px]">
+          <p className="mt-3 text-[#525252] font-medium text-[15px] md:text-[18px] leading-7">
             We support the most widely used digital assets so
             <br /> you can fund your wallet effortlessly.
           </p>

@@ -27,7 +27,7 @@ export default function ThreeTapsSection() {
     return (
         <section className="py-16 bg-white">
             <FadeIn>
-                <h2 className="text-[#262626] font-bold text-[23px] md:text-[32px] leading-tight mb-12">
+                <h2 className="text-[#262626] font-bold text-[23px] md:text-[32px] leading-none mb-12 text-center">
                     From Crypto to Cash in 3 Taps
                 </h2>
             </FadeIn>

@@ -100,7 +100,7 @@ export default function Header({
                   <div className="px-[28px] py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
                     {/* Left side - Text */}
                     <div>
-                      <h3 className="text-[#262626] font-bold text-[32px] md:text-[40px] leading-tight">
+                      <h3 className="text-[#262626] font-bold text-[32px] md:text-[40px] leading-none">
                         A better money experience, built for real people.
                       </h3>
                     </div>

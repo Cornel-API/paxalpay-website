@@ -5,7 +5,7 @@ export default function FeaturesStrip() {
   return (
     <section className="py-16">
       <FadeIn>
-        <h2 className="text-[#262626] font-bold  text-[18px] mb-10">
+        <h2 className="text-[#525252] font-bold  text-[18px] mb-10">
           Tired of P2P Drama?
         </h2>
       </FadeIn>

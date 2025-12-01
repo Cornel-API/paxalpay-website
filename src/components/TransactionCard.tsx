@@ -17,13 +17,13 @@ function CardInner({ type, timestamp, amount, value }: CardProps) {
             <path d="M5 12l4 4 10-10" stroke="#38a169" strokeWidth="2" />
           </svg>
         </div>
-        <div className="leading-tight text-left">
+        <div className="leading-none text-left">
           <div className="text-[#262626] font-semibold text-[14px] md:text-[16px]">{type}</div>
           <div className="text-[#525252] text-[12px] md:text-[14px]">{timestamp}</div>
         </div>
       </div>
 
-      <div className="text-right leading-tight pr-1">
+      <div className="text-right leading-none pr-1">
         <div className="text-[#262626] font-semibold text-[14px] md:text-[16px]">{amount}</div>
         <div className="text-[#525252] text-[12px] md:text-[14px]">{value}</div>
       </div>
@@ -70,9 +70,8 @@ export default function TransactionCard() {
 
       {/* CARD SLIDING IN FROM BEHIND */}
       <div
-        className={`absolute inset-0 z-20 transition-transform duration-300 ease-out ${
-          isAnimating ? "translate-y-0 scale-100" : "translate-y-[28px] scale-[0.95]"
-        }`}
+        className={`absolute inset-0 z-20 transition-transform duration-300 ease-out ${isAnimating ? "translate-y-0 scale-100" : "translate-y-[28px] scale-[0.95]"
+          }`}
       >
         <CardInner {...cards[next]} />
       </div>

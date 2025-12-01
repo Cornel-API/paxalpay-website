@@ -29,13 +29,11 @@ export default function ExchangeRatesSection() {
                 {/* Left side - Text content */}
                 <FadeIn direction="right">
                     <div>
-                        <h2 className="text-center md:text-left text-[#262626] font-bold  text-[23px] md:text-[36px] leading-tight">
-                            No Hidden Fees.
-                            <br className="md:hidden block" />
-                            Just Honest Numbers.
+                        <h2 className="text-center md:text-left text-[#262626] font-bold  text-[23px] md:text-[36px] leading-none">
+                            No Hidden Fees.<br />Just Honest Numbers.
                         </h2>
                         <p className="hidden md:block mt-4 text-[#525252] font-medium text-[14px] md:text-[18px] leading-7">
-                            We show our 1.5% fee upfront. Others hide it <br />in the exchange rate.
+                            We show our fee upfront. Others hide it <br />in the exchange rate.
                         </p>
                         <Link
                             href="/rates#supported-tokens"
