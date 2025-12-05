@@ -16,7 +16,7 @@ export default function StoreButton({ platform, href = "#", className }: StoreBu
   return (
     <a href={href} className={("inline-flex items-center rounded-[14px] bg-black px-3 py-3 text-white " + (className ?? "")).trim()}>
       <Image src={iconSrc} alt={alt} width={24} height={24} />
-      <span className="ml-2 leading-none ">
+      <span className="ml-2 leading-none whitespace-nowrap text-left">
         <span className="block text-[7px] text-[#D2E25E]">{topLine}</span>
         <span className="block text-[14px] text-[#D2E25E]">{bottomLine}</span>
       </span>

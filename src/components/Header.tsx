@@ -59,14 +59,14 @@ export default function Header({
         (className ?? "")
       }
     >
-      <div className="max-w-[1740px] mx-auto flex w-full items-center justify-between px-[28px] pr-[18px] md:pr-[28px] py-3">
+      <div className="relative max-w-[1740px] mx-auto flex w-full items-center justify-between px-[28px] pr-[18px] md:pr-[28px] py-3">
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2" aria-label="Home">
             <Image src="/logo.svg" alt="Paxalpay logo" width={112} height={28} priority />
           </Link>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8 text-16 font-medium text-zinc-700">
+        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 text-16 font-medium text-zinc-700">
           {navItems.map((item) => (
             <Link
               key={item.href}
