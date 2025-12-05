@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import LogoBanner from "@/components/LogoBanner";
 
 export const metadata: Metadata = {
   title: "Paxalpay - Skip the P2P Wait. Spend Your Crypto Instantly",
@@ -26,9 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased`}>
-        <SmoothScroll />
-        <Header />
-        <div className=" px-[28px] max-w-[1740px] mx-auto">{children}</div>
+        <div className="relative z-10 bg-white mb-[350px]">
+          <SmoothScroll />
+          <Header />
+          <div className=" px-[28px] max-w-[1740px] mx-auto">{children}</div>
+        </div>
+        <LogoBanner />
       </body>
     </html>
   );

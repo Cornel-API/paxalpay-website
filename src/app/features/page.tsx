@@ -4,7 +4,7 @@ import FeaturesTabsSection from "../../components/FeaturesTabsSection";
 import FeatureRibbon from "../../components/FeatureRibbon";
 import Footer from "../../components/Footer";
 import PeopleSection from "@/components/PeopleSection";
-import LogoBanner from "@/components/LogoBanner";
+
 
 export default function FeaturesPage() {
     return (
@@ -25,7 +25,7 @@ export default function FeaturesPage() {
             />
             <PeopleSection />
             <Footer />
-            <LogoBanner />
+
         </main>
     );
 }

@@ -10,7 +10,7 @@ import SpiralSection from "@/components/SpiralSection";
 import LicenseSection from "@/components/LicenseSection";
 import ThreeTapsSection from "@/components/ThreeTapsSection";
 import ExchangeRatesSection from "@/components/ExchangeRatesSection";
-import LogoBanner from "@/components/LogoBanner";
+
 import SplashScreen from "@/components/SplashScreen";
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
         <PeopleSection />
         <FAQSection />
         <SpiralSection />
-        <LogoBanner />
+
       </main>
     </SplashScreen>
   );
