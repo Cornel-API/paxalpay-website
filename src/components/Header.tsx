@@ -16,7 +16,7 @@ export default function Header({
   navItems = [
     { label: "Features", href: "/features" },
     { label: "Rates", href: "/rates" },
-    { label: "Support", href: "/#support" },
+    { label: "Support", href: "/support" },
   ],
   className,
   showDownload = true,
@@ -48,6 +48,9 @@ export default function Header({
     }
     if (href === "/features") {
       return pathname === "/features";
+    }
+    if (href === "/support") {
+      return pathname === "/support";
     }
     return false;
   };

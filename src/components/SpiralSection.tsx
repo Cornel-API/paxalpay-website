@@ -61,11 +61,6 @@ export default function SpiralSection() {
             </div>
           </div>
 
-          <div className="absolute bottom-[250px] left-[calc(50%+260px+375px)]">
-            <div className="relative h-[147px] w-[220px]">
-              <Image src="/left_side.png" alt="Right side 2" fill className="object-contain rounded-[12px]" />
-            </div>
-          </div>
         </div>
       </section>
       <FeatureRibbon
