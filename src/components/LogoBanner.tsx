@@ -18,7 +18,7 @@ export default function LogoBanner() {
                 {animationData && (
                     <Lottie
                         animationData={animationData}
-                        loop={false}
+                        loop={true}
                         autoplay={true}
                         className="w-full h-full"
                     />
