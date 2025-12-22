@@ -7,17 +7,20 @@ import StaggerContainer from "./animations/StaggerContainer";
 const rates = [
     {
         token: "BTC",
-        logo: "/crypto/bitcoin.svg",
+        icon: "/crypto/bitcoin.svg",
+        iconBg: "#F7931A",
         rate: "₦45,234,500"
     },
     {
         token: "USDT",
-        logo: "/crypto/tether.svg",
+        icon: "/crypto/tether.svg",
+        iconBg: "#26A17B",
         rate: "₦2,847,320"
     },
     {
         token: "TRON",
-        logo: "/crypto/tron.svg",
+        icon: "/crypto/tron.svg",
+        iconBg: "#EB0029",
         rate: "₦154,500"
     },
 ];
@@ -62,21 +65,52 @@ export default function ExchangeRatesSection() {
                                 >
                                     {/* Left: Overlapping icons + token name */}
                                     <div className="flex items-center gap-3">
-                                        {/* Overlapping circles - Nigerian flag as subscript */}
+                                        {/* Overlapping circles - Network badge as subscript */}
                                         <div className="relative w-12 h-12">
                                             {/* Crypto logo - main */}
-                                            <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-white overflow-hidden flex items-center justify-center p-1">
+                                            <div
+                                                className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
+                                                style={{ backgroundColor: item.iconBg }}
+                                            >
                                                 <Image
-                                                    src={item.logo}
+                                                    src={item.icon}
                                                     alt={item.token}
-                                                    width={32}
-                                                    height={32}
+                                                    width={20}
+                                                    height={20}
                                                     className="object-contain"
                                                 />
                                             </div>
-                                            {/* Nigerian flag - subscript (bottom-right) */}
-                                            <div className="absolute right-0 bottom-0 w-5 h-5 rounded-full overflow-hidden shadow-sm">
-                                                <div className="w-full h-full flex">
+
+                                            {/* Network badge - subscript (bottom-right) */}
+                                            <div className="absolute right-2 bottom-1 w-5 h-5 rounded-full bg-white border-2 border-white flex items-center justify-center shadow-sm">
+                                                {/* Using Nigerian flag as network badge for now based on context, 
+                                                    or should I use the network icon? 
+                                                    "crypto and the nigeria logo subscript i want it to match how we did it in rate tab" 
+                                                    The rate tab uses network badges. 
+                                                    Wait, the user said "match how we did it in rate tab" but also mentioned "nigeria logo subscript". 
+                                                    The rates tab (SupportedTokensTable) uses network badges (TRC20, etc). 
+                                                    The current ExchangeRatesSection HAS a Nigeria flag subscript.
+                                                    Maybe the user wants the Nigeria flag to be a subscript LIKE the network badges in the rate tab?
+                                                    The current implementation ALREADY has the Nigeria flag as a subscript.
+                                                    "i like the one in the rates tab" -> this implies they like the STYLE of the rates tab.
+                                                    The rates tab has a specific styling for the icon (bg color, size) and the subscript.
+                                                    I will replicate the icon styling (bg color, inner padding/centering) and the subscript positioning/styling from SupportedTokensTable.
+                                                    
+                                                    In SupportedTokensTable:
+                                                    - Main icon: w-10 h-10, rounded-full, flex center, specific bg color.
+                                                    - Subscript: -bottom-1 -right-1, w-5 h-5, white border.
+                                                    
+                                                    The current ExchangeRatesSection has:
+                                                    - Main: w-10 h-10, bg-white (plain), p-1.
+                                                    - Subscript: right-0 bottom-0, w-5 h-5.
+                                                    
+                                                    I will update to match SupportedTokensTable:
+                                                    1. Add iconBg to data.
+                                                    2. Use the same structure for the main icon container.
+                                                    3. Use the same structure for the subscript container.
+                                                    4. Keep the Nigeria flag as the subscript content as requested ("nigeria logo subscript").
+                                                */}
+                                                <div className="w-full h-full flex rounded-full overflow-hidden">
                                                     <div className="w-1/3 bg-green-600"></div>
                                                     <div className="w-1/3 bg-white"></div>
                                                     <div className="w-1/3 bg-green-600"></div>

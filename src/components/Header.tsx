@@ -65,7 +65,7 @@ export default function Header({
       <div className="relative max-w-[1740px] mx-auto flex w-full items-center justify-between px-[28px] pr-[18px] md:pr-[28px] py-3">
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2" aria-label="Home">
-            <Image src="/logo.svg" alt="Paxalpay logo" width={112} height={28} priority />
+            <Image src="/logo.svg" alt="Paxalpay logo" width={160} height={30} priority />
           </Link>
         </div>
 
