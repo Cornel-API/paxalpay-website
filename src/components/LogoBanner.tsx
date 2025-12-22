@@ -6,7 +6,7 @@ export default function LogoBanner() {
     const [animationData, setAnimationData] = useState<any>(null);
 
     useEffect(() => {
-        fetch("/motion/PaxalPay Wide.json")
+        fetch("/motion/paxalpay_wide.json")
             .then((r) => r.json())
             .then((data) => setAnimationData(data))
             .catch((error) => console.error("Error loading animation:", error));
