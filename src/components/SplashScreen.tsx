@@ -12,11 +12,11 @@ export default function SplashScreen({ children }: Props) {
   const [fullData, setFullData] = useState<unknown>(null);
 
   useEffect(() => {
-    // Check if user has seen the splash screen before
-    const hasSeenSplash = localStorage.getItem("hasSeenSplash");
+    // Check if user has seen the splash screen in this session
+    const hasSeenSplash = sessionStorage.getItem("hasSeenSplash");
 
     if (hasSeenSplash) {
-      // Skip splash screen for returning visitors
+      // Skip splash screen for reloads in the same session
       setHidden(true);
       return;
     }
@@ -58,7 +58,7 @@ export default function SplashScreen({ children }: Props) {
   // Mark splash as seen when animation completes
   const handleAnimationComplete = () => {
     setHidden(true);
-    localStorage.setItem("hasSeenSplash", "true");
+    sessionStorage.setItem("hasSeenSplash", "true");
   };
 
   return (

@@ -22,8 +22,8 @@ export default function SpiralSection() {
           </div>
 
           <div className="absolute top-50 inset-x-0 flex justify-center gap-4">
-            <Image src="/right_side.png" alt="Left side" width={160} height={280} className="rounded-[14px]" />
-            <Image src="/left_side1.png" alt="Right side 1" width={160} height={280} className="rounded-[14px]" />
+            <Image src="/right_sides.png" alt="Left side" width={160} height={280} className="rounded-[14px]" />
+            <Image src="/left_sides.png" alt="Right side 1" width={160} height={280} className="rounded-[14px]" />
           </div>
 
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
@@ -50,14 +50,14 @@ export default function SpiralSection() {
 
           <div className="absolute bottom-[150px] left-[calc(50%-580px)]">
             <div className="relative flex-shrink-0">
-              <Image src="/right_side.png" alt="Left side" width={320} height={570} className="rounded-[18px]" />
+              <Image src="/right_sides.png" alt="Left side" width={320} height={570} className="rounded-[18px]" />
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 h-8 w-28 rounded-full bg-black/10" />
             </div>
           </div>
 
           <div className="absolute bottom-[150px] left-[calc(50%+260px)]">
             <div className="relative flex-shrink-0">
-              <Image src="/left_side1.png" alt="Right side 1" width={320} height={580} className="rounded-[18px]" />
+              <Image src="/left_sides.png" alt="Right side 1" width={320} height={580} className="rounded-[18px]" />
             </div>
           </div>
 
