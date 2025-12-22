@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface RatesCalculatorProps {
     className?: string;
@@ -8,9 +9,9 @@ interface RatesCalculatorProps {
 }
 
 const currencies = [
-    { code: "USDT", name: "USDT (TRC-20)", icon: "₮", color: "#26A17B" },
-    { code: "BTC", name: "Bitcoin (BTC)", icon: "₿", color: "#F7931A" },
-    { code: "ETH", name: "Ethereum (ETH)", icon: "Ξ", color: "#627EEA" },
+    { code: "USDT", name: "USDT (TRC-20)", icon: "/crypto/tether.svg", color: "#26A17B" },
+    { code: "BTC", name: "Bitcoin (BTC)", icon: "/crypto/bitcoin.svg", color: "#F7931A" },
+    { code: "ETH", name: "Ethereum (ETH)", icon: "/crypto/etherum.svg", color: "#627EEA" },
 ];
 
 export default function RatesCalculator({ className, initialCurrency, initialAmount }: RatesCalculatorProps) {
@@ -20,6 +21,8 @@ export default function RatesCalculator({ className, initialCurrency, initialAmo
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
     const receiveCurrency = "NGN";
+
+
 
     const rate = 830;
     const refreshTime = "00:27s";
@@ -99,7 +102,7 @@ export default function RatesCalculator({ className, initialCurrency, initialAmo
                                                     className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold"
                                                     style={{ backgroundColor: currency.color }}
                                                 >
-                                                    {currency.icon}
+                                                    <Image src={currency.icon} alt={currency.code} width={20} height={20} className="object-contain" />
                                                 </div>
                                                 <span className="text-[#262626] text-[15px] font-medium">
                                                     {currency.name}
@@ -133,7 +136,7 @@ export default function RatesCalculator({ className, initialCurrency, initialAmo
                                 className="w-10 h-10 rounded-full flex items-center justify-center"
                                 style={{ backgroundColor: selectedCurrency.color }}
                             >
-                                <span className="text-white text-lg font-bold">{selectedCurrency.icon}</span>
+                                <Image src={selectedCurrency.icon} alt={selectedCurrency.code} width={24} height={24} className="object-contain" />
                             </div>
                         </div>
                     </div>
@@ -179,7 +182,7 @@ export default function RatesCalculator({ className, initialCurrency, initialAmo
                             className="absolute left-0 top-0 w-12 h-12 rounded-full flex items-center justify-center"
                             style={{ backgroundColor: selectedCurrency.color }}
                         >
-                            <span className="text-white text-lg font-bold">{selectedCurrency.icon}</span>
+                            <Image src={selectedCurrency.icon} alt={selectedCurrency.code} width={28} height={28} className="object-contain" />
                         </div>
                         <div className="absolute right-0 bottom-0 w-6 h-6 rounded-full overflow-hidden shadow-sm z-10 border-2 border-white">
                             <div className="w-full h-full flex">

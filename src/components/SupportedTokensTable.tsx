@@ -13,72 +13,37 @@ interface Token {
 }
 
 const tokens: Token[] = [
-    { name: "Tether (USDT)", network: "TRC20", rate: "₦1,655.00", icon: "₮", iconBg: "#26A17B", code: "USDT" },
-    { name: "Tether (USDT)", network: "BEP20", rate: "₦1,655.00", icon: "₮", iconBg: "#26A17B", code: "USDT" },
-    { name: "Tether (USDT)", network: "ERC20", rate: "₦1,655.00", icon: "₮", iconBg: "#26A17B", code: "USDT" },
-    { name: "Tether (USDT)", network: "Bitcoin Network", rate: "₦1,655.00", icon: "₮", iconBg: "#26A17B", code: "USDT" },
-    { name: "Tether (USDT)", network: "Arbitrum", rate: "₦1,655.00", icon: "₮", iconBg: "#26A17B", code: "USDT" },
-    { name: "Tether (USDT)", network: "Solana Network", rate: "₦1,655.00", icon: "₮", iconBg: "#26A17B", code: "USDT" },
-    { name: "USD Coin (USDC)", network: "ERC20", rate: "₦1,645.00", icon: "$", iconBg: "#2775CA", code: "USDC" },
-    { name: "USD Coin (USDC)", network: "Solana Network", rate: "₦1,645.00", icon: "$", iconBg: "#2775CA", code: "USDC" },
+    { name: "Tether (USDT)", network: "TRC20", rate: "₦1,655.00", icon: "/crypto/tether.svg", iconBg: "#26A17B", code: "USDT" },
+    { name: "Tether (USDT)", network: "BEP20", rate: "₦1,655.00", icon: "/crypto/tether.svg", iconBg: "#26A17B", code: "USDT" },
+    { name: "Tether (USDT)", network: "ERC20", rate: "₦1,655.00", icon: "/crypto/tether.svg", iconBg: "#26A17B", code: "USDT" },
+    { name: "Tether (USDT)", network: "Bitcoin Network", rate: "₦1,655.00", icon: "/crypto/tether.svg", iconBg: "#26A17B", code: "USDT" },
+    { name: "Tether (USDT)", network: "Arbitrum", rate: "₦1,655.00", icon: "/crypto/tether.svg", iconBg: "#26A17B", code: "USDT" },
+    { name: "Tether (USDT)", network: "Solana Network", rate: "₦1,655.00", icon: "/crypto/tether.svg", iconBg: "#26A17B", code: "USDT" },
+    { name: "USD Coin (USDC)", network: "ERC20", rate: "₦1,645.00", icon: "/crypto/usdc.svg", iconBg: "#2775CA", code: "USDC" },
+    { name: "USD Coin (USDC)", network: "Solana Network", rate: "₦1,645.00", icon: "/crypto/usdc.svg", iconBg: "#2775CA", code: "USDC" },
 ];
 
 const getNetworkBadge = (network: string) => {
     switch (network.toLowerCase()) {
         case "trc20":
-            return (
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="#EB0029">
-                    <path d="M3.2 2.3l17 3.4.1.2-7.6 15.8h-.3L2.1 3.5l1.1-1.2zm1.6 2.3l5.6 12.1 5.8-12-11.4-.1zm6.7 11.7l6.1-12.7 2.8.6-8.5 17.7-.4-.1-6.4-13.8 2.9-.3 5.5 12.1z" />
-                </svg>
-            );
+            return <Image src="/crypto/tron.svg" alt="TRC20" width={14} height={14} />;
 
         case "bep20":
-            return (
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="#F3BA2F">
-                    <path d="M12 1.8L7.1 4.6l4.9 2.8 4.9-2.8L12 1.8zM4 7.5v5.7l4.9 2.8V10.3L4 7.5zm16 0l-4.9 2.8v5.7L20 13.2V7.5zM12 12l4.9 2.8-4.9 2.8-4.9-2.8L12 12z" />
-                </svg>
-            );
+            return <Image src="/crypto/binance.svg" alt="BEP20" width={14} height={14} />;
 
         case "erc20":
         case "ethereum":
-            return (
-                <svg width="14" height="14" viewBox="0 0 256 417" fill="#627EEA">
-                    <path d="M127.6 0L124 12.3v271.2l3.6 3.6 127.6-75.4z" />
-                    <path d="M127.6 0L0 211.7l127.6 75.4V0z" />
-                    <path d="M127.6 342.7l-3 3.7v67.4l3-8.7 127.7-179.8z" />
-                    <path d="M127.6 413.8V342.7L0 225.3z" />
-                </svg>
-            );
+            return <Image src="/crypto/etherum.svg" alt="Ethereum" width={14} height={14} />;
 
         case "bitcoin network":
-            return (
-                <svg width="14" height="14" viewBox="0 0 32 32" fill="#F7931A">
-                    <path d="M16 0a16 16 0 1016 16A16 16 0 0016 0zm2.2 23.3h-1.7v2.4h-1.5v-2.4h-1.4v-1.4h1.4v-.9h-1.4v-1.5h1.4v-7.2h3.1a3.4 3.4 0 013.4 3.4 3.4 3.4 0 01-2.1 3.1 3.4 3.4 0 011.9 3.2c0 2.2-1.8 3.3-4.1 3.3zm-.8-9.9h-1.9v2.6h1.9a1.3 1.3 0 100-2.6zm.2 4h-2.1v2.8h2.1a1.4 1.4 0 000-2.8z" />
-                </svg>
-            );
+            return <Image src="/crypto/bitcoin.svg" alt="Bitcoin" width={14} height={14} />;
 
         case "arbitrum":
-            return (
-                <svg width="14" height="14" viewBox="0 0 256 256">
-                    <path fill="#2D3748" d="M128 0L0 74v108l128 74 128-74V74z" />
-                    <path fill="#28A0F0" d="M128 28l96 54v92l-96 54-96-54V82z" />
-                    <path fill="#fff" d="M164 176l-18 10-30-88 18-10 30 88zM110 176l-18 10-30-88 18-10 30 88z" />
-                </svg>
-            );
+            return <Image src="/crypto/arbitrum.svg" alt="Arbitrum" width={14} height={14} />;
 
         case "solana network":
         case "solana":
-            return (
-                <svg width="14" height="14" viewBox="0 0 397 311">
-                    <linearGradient id="sol" x1="0" x2="1" y1="0" y2="1">
-                        <stop offset="0%" stopColor="#00FFA3" />
-                        <stop offset="100%" stopColor="#DC1FFF" />
-                    </linearGradient>
-                    <path fill="url(#sol)" d="M64 224h297l-65 64H0z" />
-                    <path fill="url(#sol)" d="M64 127h297l-65 64H0z" />
-                    <path fill="url(#sol)" d="M64 31h297L296 95H0z" />
-                </svg>
-            );
+            return <Image src="/crypto/solana.svg" alt="Solana" width={14} height={14} />;
 
         default:
             return null;
@@ -158,7 +123,7 @@ export default function SupportedTokensTable({ onCalculate }: SupportedTokensTab
                                                 className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
                                                 style={{ backgroundColor: token.iconBg }}
                                             >
-                                                {token.icon}
+                                                <Image src={token.icon} alt={token.name} width={20} height={20} className="object-contain" />
                                             </div>
 
                                             {/* Dynamic Network Badge */}

@@ -7,17 +7,17 @@ import StaggerContainer from "./animations/StaggerContainer";
 const rates = [
     {
         token: "BTC",
-        logo: "https://cryptologos.cc/logos/bitcoin-btc-logo.svg",
+        logo: "/crypto/bitcoin.svg",
         rate: "₦45,234,500"
     },
     {
         token: "USDT",
-        logo: "https://cryptologos.cc/logos/tether-usdt-logo.svg",
+        logo: "/crypto/tether.svg",
         rate: "₦2,847,320"
     },
     {
         token: "TRON",
-        logo: "https://cryptologos.cc/logos/tron-trx-logo.svg",
+        logo: "/crypto/tron.svg",
         rate: "₦154,500"
     },
 ];

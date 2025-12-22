@@ -6,11 +6,11 @@ import SupportedTokensTable from "./SupportedTokensTable";
 
 
 const currencies = [
-    { code: "USDT", name: "USDT (TRC-20)", icon: "₮", color: "#26A17B" },
-    { code: "USDT", name: "USDT (BEP-20)", icon: "₮", color: "#26A17B" },
-    { code: "USDT", name: "USDT (ERC-20)", icon: "₮", color: "#26A17B" },
-    { code: "BTC", name: "Bitcoin (BTC)", icon: "₿", color: "#F7931A" },
-    { code: "ETH", name: "Ethereum (ETH)", icon: "Ξ", color: "#627EEA" },
+    { code: "USDT", name: "USDT (TRC-20)", icon: "/crypto/tether.svg", color: "#26A17B" },
+    { code: "USDT", name: "USDT (BEP-20)", icon: "/crypto/tether.svg", color: "#26A17B" },
+    { code: "USDT", name: "USDT (ERC-20)", icon: "/crypto/tether.svg", color: "#26A17B" },
+    { code: "BTC", name: "Bitcoin (BTC)", icon: "/crypto/bitcoin.svg", color: "#F7931A" },
+    { code: "ETH", name: "Ethereum (ETH)", icon: "/crypto/etherum.svg", color: "#627EEA" },
 ];
 
 export default function RatesHeroSection() {
