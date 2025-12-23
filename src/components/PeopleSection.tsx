@@ -5,7 +5,8 @@ export default function PeopleSection() {
   return (
     <section className="relative -mx-[28px] w-[calc(100%+56px)] overflow-hidden">
       <div className="relative w-full h-[976px] pt-30">
-        <Image src="/peoples.png" alt="Real people using Paxalpay" fill className="object-cover object-top" priority />
+        <Image src="/peoples.png" alt="Real people using Paxalpay" fill className="hidden md:block object-cover object-top" priority />
+        <Image src="/peoples_mobile.png" alt="Real people using Paxalpay" fill className="md:hidden object-cover object-top" priority />
         <div className="absolute inset-0 bg-[#0000004D]" />
 
         <div className="absolute inset-0 h-full flex flex-col justify-between md:items-end md:pb-18 px-[16px] md:px-[28px] pb-8 pt-12 md:pt-24">
