@@ -119,10 +119,16 @@ export default function AutoTabs() {
           <div className="h-full min-h-[550px] md:min-h-0 overflow-hidden flex items-start justify-start relative" role="tabpanel" id={`tab-panel-${active}`} aria-labelledby={`tab-underline-${active}`} aria-live="polite">
             <div className="absolute inset-0 z-0">
               <Image
-                src={tabs[active].image}
+                src="/tab2.png"
                 alt=""
                 fill
-                className="object-cover"
+                className="hidden md:block object-cover"
+              />
+              <Image
+                src="/tab2_mobile.png"
+                alt=""
+                fill
+                className="md:hidden object-cover"
               />
             </div>
             <p className="text-left text-[#262626] text-[20px] leading-7 md:max-w-[447px] relative z-10 px-6 md:px-10 pt-6 md:pt-10">{tabs[active].content}</p>
