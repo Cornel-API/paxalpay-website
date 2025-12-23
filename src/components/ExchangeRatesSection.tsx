@@ -20,7 +20,7 @@ const rates = [
     {
         token: "TRON",
         icon: "/crypto/tron.svg",
-        iconBg: "#EB0029",
+        iconBg: "transparent",
         rate: "₦154,500"
     },
 ];

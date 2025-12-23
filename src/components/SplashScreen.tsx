@@ -5,11 +5,8 @@ import Lottie from "lottie-react";
 type Props = { children: React.ReactNode };
 
 export default function SplashScreen({ children }: Props) {
-  const [loaded, setLoaded] = useState(false);
-  const [playFinal, setPlayFinal] = useState(false);
+  const [animationData, setAnimationData] = useState<object | null>(null);
   const [hidden, setHidden] = useState(false);
-  const [blueData, setBlueData] = useState<unknown>(null);
-  const [fullData, setFullData] = useState<unknown>(null);
 
   useEffect(() => {
     // Check if user has seen the splash screen in this session
@@ -22,36 +19,15 @@ export default function SplashScreen({ children }: Props) {
     }
 
     let mounted = true;
-    fetch("/motion/logo_loading_animation_blue.json")
+    fetch("/motion/paxalpay_vertical.json")
       .then((r) => r.json())
       .then((d) => {
-        if (mounted) setBlueData(d);
+        if (mounted) setAnimationData(d);
       })
-      .catch(() => { });
-    fetch("/motion/Artboard2.json")
-      .then((r) => r.json())
-      .then((d) => {
-        if (mounted) setFullData(d);
-      })
-      .catch(() => { });
+      .catch((e) => console.error("Error loading splash animation:", e));
 
-    const handleLoad = () => {
-      setLoaded(true);
-      setTimeout(() => setPlayFinal(true), 5000);
-    };
-
-    if (typeof window !== "undefined") {
-      if (document.readyState === "complete") {
-        handleLoad();
-      } else {
-        window.addEventListener("load", handleLoad);
-      }
-    }
     return () => {
       mounted = false;
-      if (typeof window !== "undefined") {
-        window.removeEventListener("load", handleLoad);
-      }
     };
   }, []);
 
@@ -65,22 +41,15 @@ export default function SplashScreen({ children }: Props) {
     <>
       {!hidden && (
         <div className="fixed inset-0 bg-black flex items-center justify-center z-[9999]">
-          {playFinal && fullData ? (
+          {animationData && (
             <Lottie
-              animationData={fullData}
+              animationData={animationData}
               loop={false}
               autoplay
               onComplete={handleAnimationComplete}
-              style={{ width: 500, height: 500 }}
+              style={{ width: "100%", maxWidth: 500 }}
             />
-          ) : blueData ? (
-            <Lottie
-              animationData={blueData}
-              loop={!playFinal}
-              autoplay
-              style={{ width: 80, height: 80, marginTop: "-20px" }}
-            />
-          ) : null}
+          )}
         </div>
       )}
 
