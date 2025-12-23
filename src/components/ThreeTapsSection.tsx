@@ -7,19 +7,19 @@ const steps = [
         title: "Deposit",
         description: "Send BTC, ETH, USDT, or 15+ other tokens to your PaxalPay wallet",
         image: "/qr_code.png",
-        bgColor: "#FCF7F1",
+        bgColor: "#FAFAFA",
     },
     {
         title: "Instant Conversion",
         description: "See exactly what you'll get. No hidden fees. No surprises.",
         image: "/Notification.png",
-        bgColor: "#FCF7F1",
+        bgColor: "#FAFAFA",
     },
     {
         title: "Spend or Withdraw",
         description: "Currency hits your wallet instantly. Withdraw, pay bills, or send to friends.",
         image: "/tag.png",
-        bgColor: "#FCF7F1",
+        bgColor: "#FAFAFA",
     },
 ];
 

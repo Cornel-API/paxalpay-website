@@ -11,10 +11,10 @@ type FeatureRibbonProps = {
 export default function FeatureRibbon({ items, iconSrc = "/flag.svg", className }: FeatureRibbonProps) {
   return (
     <FadeIn className={("relative -mx-[28px] w-[calc(100%+56px)] overflow-hidden " + (className ?? "")).trim()}>
-      <div className="bg-black px-2 py-4">
+      <div className="bg-black px-4 py-4">
         <div className="overflow-hidden">
           <div className="marquee-left flex">
-            <ul className="flex items-center gap-8">
+            <ul className="flex items-center gap-10">
               {items.map((f) => (
                 <li key={f} className="flex items-center gap-2 whitespace-nowrap">
                   <Image src={iconSrc} alt="flag" width={20} height={20} />
@@ -22,7 +22,7 @@ export default function FeatureRibbon({ items, iconSrc = "/flag.svg", className 
                 </li>
               ))}
             </ul>
-            <ul className="flex items-center gap-8">
+            <ul className="flex items-center gap-10 pl-10">
               {items.map((f, i) => (
                 <li key={`${f}-${i}`} className="flex items-center gap-2 whitespace-nowrap">
                   <Image src={iconSrc} alt="flag" width={18} height={18} />
