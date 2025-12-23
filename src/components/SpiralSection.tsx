@@ -63,17 +63,6 @@ export default function SpiralSection() {
 
         </div>
       </section>
-      <FeatureRibbon
-        items={[
-          "Instant conversion",
-          "No P2P risk",
-          "Pay bills fast",
-          "Transparent rates",
-          "Fast transfers",
-          "Stablecoins supported",
-          "On-chain verified",
-        ]}
-      />
 
       <Footer />
     </>
