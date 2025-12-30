@@ -18,23 +18,23 @@ export default function PeopleSection() {
             </h2>
           </div>
 
-          <div className="w-full md:w-auto">
+          {/* <div className="w-full md:w-auto">
             <div className="text-[18px] font-bold text-[#D2E25E] mb-2 text-left">Scan to download</div>
             <div className="flex items-center gap-4">
-              <div className="h-[210px] w-[210px] rounded-[18px] bg-white/20 backdrop-blur-md shadow-lg flex items-center justify-center border border-white/10">
+              <div className="w-[210px] aspect-square rounded-[18px] bg-white/20 backdrop-blur-md shadow-lg flex items-center justify-center border border-white/10">
                 <Image src="/qrcode_apple.svg" alt="App Store QR" width={160} height={160} className="w-[160px] h-[160px]" />
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <Image src="/apple.svg" alt="Apple Logo" width={32} height={32} />
                 </div>
               </div>
-              <div className="h-[210px] w-[210px] rounded-[18px] bg-white/20 backdrop-blur-md shadow-lg flex items-center justify-center border border-white/10">
+              <div className="w-[210px] aspect-square rounded-[18px] bg-white/20 backdrop-blur-md shadow-lg flex items-center justify-center border border-white/10">
                 <Image src="/qrcode_google.svg" alt="Google Play QR" width={160} height={160} className="w-[160px] h-[160px]" />
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <Image src="/playstore.svg" alt="Play Store Logo" width={32} height={32} />
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

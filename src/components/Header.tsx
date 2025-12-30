@@ -98,42 +98,38 @@ export default function Header({
               </Link>
 
               {/* QR Code Dropdown */}
-              {showQRDropdown && (
-                <div ref={dropdownRef} className="fixed left-0 right-0 top-0 bg-[#D2E25E] shadow-2xl z-50">
-                  <div className="px-[28px] py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
-                    {/* Left side - Text */}
-                    <div>
-                      <h3 className="text-[#262626] font-bold text-[32px] md:text-[40px] leading-none">
-                        A better money experience, built for real people.
-                      </h3>
-                    </div>
-
-                    {/* Right side - QR Codes */}
-                    <div className="flex flex-col items-center md:items-end gap-4">
-                      <p className="text-[#262626] text-[18px] font-semibold">Scan to download</p>
-                      <div className="flex items-center gap-6">
-                        {/* Apple QR Code */}
-                        <div className="flex flex-col items-center gap-2">
-                          <div className="w-[150px] h-[150px] bg-white rounded-[12px] p-3 flex items-center justify-center">
-                            <div className="w-full h-full bg-gray-200 rounded flex items-center justify-center">
-                              <Image src="/apple.svg" alt="App Store QR" width={40} height={40} />
+              {/* {showQRDropdown && (
+                  <div ref={dropdownRef} className="fixed left-0 right-0 top-0 bg-[#D2E25E] shadow-2xl z-50">
+                    <div className="px-[28px] py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+                      <div>
+                        <h3 className="text-[#262626] font-bold text-[32px] md:text-[40px] leading-none">
+                          A better money experience, built for real people.
+                        </h3>
+                      </div>
+  
+                      <div className="flex flex-col items-center md:items-end gap-4">
+                        <p className="text-[#262626] text-[18px] font-semibold">Scan to download</p>
+                        <div className="flex items-center gap-6">
+                          <div className="flex flex-col items-center gap-2">
+                            <div className="w-[150px] h-[150px] bg-white rounded-[12px] p-3 flex items-center justify-center">
+                              <div className="w-full h-full bg-gray-200 rounded flex items-center justify-center">
+                                <Image src="/apple.svg" alt="App Store QR" width={40} height={40} />
+                              </div>
                             </div>
                           </div>
-                        </div>
-
-                        {/* Google Play QR Code */}
-                        <div className="flex flex-col items-center gap-2">
-                          <div className="w-[150px] h-[150px] bg-white rounded-[12px] p-3 flex items-center justify-center">
-                            <div className="w-full h-full bg-gray-200 rounded flex items-center justify-center">
-                              <Image src="/playstore.svg" alt="Google Play QR" width={40} height={40} />
+  
+                          <div className="flex flex-col items-center gap-2">
+                            <div className="w-[150px] h-[150px] bg-white rounded-[12px] p-3 flex items-center justify-center">
+                              <div className="w-full h-full bg-gray-200 rounded flex items-center justify-center">
+                                <Image src="/playstore.svg" alt="Google Play QR" width={40} height={40} />
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              )}
+                )} */}
             </div>
           )}
 
@@ -174,7 +170,7 @@ export default function Header({
                   {item.label}
                 </Link>
               ))}
-              {showDownload && (
+              {/* {showDownload && (
                 <div className="md:text-right w-full md:w-auto mt-2">
                   <div className="text-[18px]  font-bold text-[#D2E25E] mb-2 text-left md:text-left">Scan or Tap to download</div>
                   <div className="flex items-center justify-center md:justify-end gap-4">
@@ -186,7 +182,7 @@ export default function Header({
                     </div>
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
           </nav>
         </div>
