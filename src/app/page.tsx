@@ -7,7 +7,7 @@ import PeopleSection from "@/components/PeopleSection";
 import FeaturesStrip from "@/components/FeaturesStrip";
 import FAQSection from "@/components/FAQSection";
 import SpiralSection from "@/components/SpiralSection";
-import LicenseSection from "@/components/LicenseSection";
+// import LicenseSection from "@/components/LicenseSection";
 import ThreeTapsSection from "@/components/ThreeTapsSection";
 import ExchangeRatesSection from "@/components/ExchangeRatesSection";
 
@@ -18,7 +18,7 @@ export default function Home() {
     <SplashScreen>
       <main className="">
         <Hero />
-        <LicenseSection />
+        {/* <LicenseSection /> */}
         <FeaturesStrip />
         <ThreeTapsSection />
         {/* <About /> */}
