@@ -1,29 +1,16 @@
 "use client";
 
 import Script from "next/script";
-import { useCallback } from "react";
 
 const INTERCOM_APP_ID =
   process.env.NEXT_PUBLIC_INTERCOM_APP_ID || "iev53uin";
 
-declare global {
-  interface Window {
-    Intercom?: (action: string) => void;
-  }
-}
-
 /**
  * Loads the Intercom Web Messenger for live chat.
- * Uses a large custom launcher and auto-opens the messenger when the page loads.
+ * Uses the original Intercom launcher (default icon) and auto-opens the messenger when the page loads.
  * See: https://developers.intercom.com/installing-intercom/web/installation
  */
 export default function IntercomMessenger() {
-  const openMessenger = useCallback(() => {
-    if (typeof window !== "undefined" && window.Intercom) {
-      window.Intercom("show");
-    }
-  }, []);
-
   return (
     <>
       <Script
@@ -34,7 +21,6 @@ export default function IntercomMessenger() {
             window.intercomSettings = {
               api_base: "https://api-iam.intercom.io",
               app_id: "${INTERCOM_APP_ID}",
-              hide_default_launcher: true,
               alignment: "right",
               horizontal_padding: 20,
               vertical_padding: 20
@@ -83,28 +69,6 @@ export default function IntercomMessenger() {
           `,
         }}
       />
-      {/* Large custom launcher — visible when messenger is closed */}
-      <button
-        type="button"
-        onClick={openMessenger}
-        className="fixed bottom-6 right-6 z-[2147483000] flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-[#1f8ded] text-white shadow-lg transition hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#1f8ded] focus:ring-offset-2"
-        aria-label="Open chat"
-      >
-        <svg
-          className="h-8 w-8 md:h-10 md:w-10"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-          />
-        </svg>
-      </button>
     </>
   );
 }

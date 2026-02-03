@@ -20,8 +20,8 @@ export default function HelpPage() {
             Contact support
           </h1>
           <p className="mt-3 text-[#525252] font-medium text-[15px] md:text-[18px] leading-7">
-            The chat opens automatically. You can also tap the blue chat button
-            in the bottom-right corner anytime to talk to our team.
+            The chat opens automatically. You can also tap the Intercom icon in the
+            bottom-right corner anytime to talk to our team.
           </p>
           <p className="mt-4 text-[#737373] text-[14px] md:text-[16px]">
             If the chat doesn’t appear, make sure your browser allows scripts and
