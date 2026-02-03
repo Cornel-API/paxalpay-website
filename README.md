@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+### Help / Support page
+
+- **Route:** `/help` (e.g. `https://paxalpay.com/help`). Opened from the Paxalpay app when users tap "Contact Support".
+- **Intercom:** The help page loads the Intercom Web Messenger for live chat. Set `NEXT_PUBLIC_INTERCOM_APP_ID=iev53uin` (see `.env.example`). In Intercom, ensure your production domain (e.g. `paxalpay.com`) is allowed for the Messenger.
+
 ## Getting Started
 
 First, run the development server:
