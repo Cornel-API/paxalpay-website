@@ -11,7 +11,7 @@ export default function Footer() {
                         <Image src="/logo.svg" alt="Paxalpay" width={203} height={39} />
                     </div>
                     <div className="mt-4 text-left text-[#525252] text-sm">
-                        © 2025 Paxalpay Technologies. All rights reserved.
+                        © 2026 Paxalpay Technologies. All rights reserved.
                     </div>
                 </div>
 
@@ -48,7 +48,7 @@ export default function Footer() {
 
             {/* Disclaimer */}
             <div className="mt-10 text-[#525252] text-[12px] md:text-[18px] leading-6 text-start md:text-left md:px-0">
-                2025 Paxalpay. All Rights Reserved. Paxalpay is a financial technology company and is not a bank. Banking services, where applicable, are provided by our regulated banking partner(s), [Name of Partner Bank/Licensed Institution], Member [Relevant Regulatory Body, e.g., NDIC or FDIC], and other licensed financial service providers. The content on this website is provided for informational purposes only and does not constitute financial, investment, legal, or tax advice. Any products or services offered, including investment options, involve inherent risks, and potential investors should consider their own personal financial situation and consult with a professional advisor before making any decisions. Past performance is not indicative of future results. [Your Company Name] is licensed and regulated by the [Primary Regulator, e.g., Central Bank of Nigeria (CBN)] as a [Specific License Type, e.g., Payments Solutions Provider] and operates in strict compliance with applicable laws and regulations in all jurisdictions where we conduct business. For complete terms, conditions, privacy policies, and regulatory disclosures, please refer to the links provided below. Unauthorized use, reproduction, or distribution of any content from this site is strictly prohibited.
+                2026 Paxalpay. All Rights Reserved. Paxalpay is a financial technology company and is not a bank. Banking services, where applicable, are provided by our regulated banking partner(s), [Name of Partner Bank/Licensed Institution], Member [Relevant Regulatory Body, e.g., NDIC or FDIC], and other licensed financial service providers. The content on this website is provided for informational purposes only and does not constitute financial, investment, legal, or tax advice. Any products or services offered, including investment options, involve inherent risks, and potential investors should consider their own personal financial situation and consult with a professional advisor before making any decisions. Past performance is not indicative of future results. [Your Company Name] is licensed and regulated by the [Primary Regulator, e.g., Central Bank of Nigeria (CBN)] as a [Specific License Type, e.g., Payments Solutions Provider] and operates in strict compliance with applicable laws and regulations in all jurisdictions where we conduct business. For complete terms, conditions, privacy policies, and regulatory disclosures, please refer to the links provided below. Unauthorized use, reproduction, or distribution of any content from this site is strictly prohibited.
             </div>
         </section>
     );
