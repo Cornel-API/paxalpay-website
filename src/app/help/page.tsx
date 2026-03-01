@@ -55,10 +55,18 @@ export default function HelpPage() {
           </li>
           <li>
             <Link
-              href="/support"
+              href="/privacy"
               className="text-blue-600 hover:underline font-medium"
             >
               Privacy policy
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/terms"
+              className="text-blue-600 hover:underline font-medium"
+            >
+              Terms & conditions
             </Link>
           </li>
         </ul>

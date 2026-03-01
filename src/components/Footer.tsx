@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -29,17 +29,18 @@ export default function Footer() {
 
                     <div className="min-w-[120px] text-left">
                         <div className="text-[#737373] font-medium text-[15px] md:text-[18px] mb-3">Support</div>
-                        <div className="flex flex-col gap-3 text-[#262626] font-medium text-[15px] md:text-[18px] cursor-default">
-                            <span>Help Center</span>
-                            <span>Contact Support</span>
-                            <span>FAQs</span>
+                        <div className="flex flex-col gap-3 text-[#262626] font-medium text-[15px] md:text-[18px]">
+                            <Link href="/help">Help Center</Link>
+                            <Link href="/help">Contact Support</Link>
+                            <Link href="/help">FAQs</Link>
                         </div>
                     </div>
 
                     <div className="min-w-[120px] text-left">
                         <div className="text-[#737373] font-medium text-[15px] md:text-[18px] mb-3">Legal</div>
                         <div className="flex flex-col gap-3 text-[#262626] font-medium text-[15px] md:text-[18px]">
-                            <a href="#">Privacy Policy</a>
+                            <Link href="/privacy">Privacy Policy</Link>
+                            <Link href="/terms">Terms & Conditions</Link>
                         </div>
                     </div>
                 </div>
