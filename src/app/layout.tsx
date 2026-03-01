@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     description: "Deposit USDT, BTC, or ETH and get settled in local currency immediately. Pay bills, transfer to any bank, or scan-to-pay.",
     type: "website",
   },
+  verification: {
+    google: "xWc-nbp-Kr7u0tLKv6jg_nP2p9EhZtX5wSYfD2m5MgU",
+  },
 };
 
 import SmoothScroll from "@/components/SmoothScroll";
