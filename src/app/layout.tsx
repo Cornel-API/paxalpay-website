@@ -29,6 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="xWc-nbp-Kr7u0tLKv6jg_nP2p9EhZtX5wSYfD2m5MgU"
+        />
+      </head>
       <body className={`antialiased`}>
         <div className="relative z-10 bg-white mb-[350px]">
           <SmoothScroll />
