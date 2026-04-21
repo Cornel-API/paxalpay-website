@@ -1,9 +1,6 @@
 import React from "react";
-import Link from "next/link";
 
-const SITE_URL = "https://paxalpay.com";
 const EMAIL_INFO = "info@paxalpay.com";
-const EMAIL_PRIVACY = "privacy@paxalpay.com";
 
 export default function PrivacyPolicyContent() {
   return (
@@ -11,216 +8,171 @@ export default function PrivacyPolicyContent() {
       <div className="max-w-[1100px] mx-auto px-6">
         <div className="text-center mb-16">
           <h1 className="text-[29px] md:text-[52px] font-bold text-[#262626] mb-4">
-            Privacy Policy
+            Data Privacy Policy
           </h1>
           <p className="text-[#737373] text-[16px]">
-            Last updated: February 3, 2026
+            November, 2022
           </p>
         </div>
 
         <div className="space-y-10 text-[#262626] text-[14px] md:text-[18px] leading-relaxed">
           <section>
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">1. Introduction and scope</h2>
             <p className="mb-4">
-              PaxalPay Limited (“<strong>Paxalpay</strong>”, “<strong>we</strong>”, “<strong>us</strong>”, “<strong>our</strong>”) operates the website{" "}
-              <a href={SITE_URL} className="text-blue-600 hover:underline">{SITE_URL}</a>, mobile applications, APIs, and related digital platforms (together, the “<strong>Site</strong>”). We are headquartered in Nigeria and provide financial technology services, including crypto-to-fiat conversion, payments, and related services (the “<strong>Services</strong>”).
+              We at Paxalpay (along with our parents, subsidiaries, and affiliates) respect your privacy and this policy describes our privacy practices regarding our products and services.
             </p>
             <p className="mb-4">
-              This Privacy Policy explains how we collect, use, disclose, store, and protect your personal data when you use our Site and Services. It applies to all visitors, users, and customers (together, “<strong>you</strong>” or “<strong>Users</strong>”). By accessing or using our Site or Services, you agree to this Privacy Policy. If you do not agree, you must not use our Site or Services.
+              A lot of laws exist that govern the personal data involved in financial and digital activity. This summary explains our privacy practices based on those laws. It covers all the processing your personal information might undergo through websites and applications operated by us, as well as to our API.
+            </p>
+            <p className="mb-4">
+              Our Data Privacy Policy explains the reason and context in which Paxalpay collects, utilizes, records, and keeps your personal data. It applies to your interactions with us and your utilization of any of our products and services.
             </p>
             <p>
-              We process personal data in line with applicable law, including the Nigeria Data Protection Act 2023 (NDPA) and, where relevant, other data protection laws. For users in the European Economic Area (EEA) or the United Kingdom, we rely on lawful bases under the GDPR/UK GDPR where applicable.
+              When using our business products such as the API, additional terms and conditions may legally bind you in our Merchant Service Agreement. This summarizes the terms and conditions and our data practices as it applies to everything you do relating to our products and services.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">2. Data controller</h2>
+            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">Information You May Control</h2>
+            <p className="mb-4">
+              Once you create a Paxalpay Account, it implies that you have given us your information. We may retain information directly tied to your particular business or personal identity (such as your name, residential address or business, email address, telephone number, transaction data, bank details, credit and debit card numbers, and similar identification data) as well as any other information you or your users may provide. We strongly advise that you DO NOT provide any information that you do not want us to possess.
+            </p>
+            <p className="mb-4">
+              We ask that you do not send us, and you to not disclose, any sensitive Personal Information (e.g., social security numbers, information related to racial or ethnic origin, political opinions, religion or other beliefs, health, biometrics or genetic characteristics, or criminal background) on or through our Services or otherwise to us.
+            </p>
+            <p className="mb-4">
+              We may verify or validate the information you provide in comparison with third-party sources (such as when we process your credit or debit card for the purpose of buying cryptocurrency, or validating your identity) to secure both your integrity and ours.
+            </p>
+            <p className="mb-4">
+              We may also obtain information from different sources (such as public databases) to verify your identity.
+            </p>
             <p>
-              The data controller responsible for your personal data is PaxalPay Limited. For privacy-related requests or complaints you may contact us at{" "}
-              <a href={`mailto:${EMAIL_PRIVACY}`} className="text-blue-600 hover:underline">{EMAIL_PRIVACY}</a> or{" "}
-              <a href={`mailto:${EMAIL_INFO}`} className="text-blue-600 hover:underline">{EMAIL_INFO}</a>.
+              You are required to submit accurate information, as your ability to properly use our product and our capacity to service you is dependent largely on it. If you believe your data is inaccurate, you can change your information, adjust your settings on your account or device or formally write to us using <a href={`mailto:${EMAIL_INFO}`} className="text-[#262626]">info@paxalpay.com</a>.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">3. Information we collect</h2>
-            <p className="mb-4">
-              We collect information that identifies you or relates to you (“<strong>Personal Data</strong>”) in the following ways.
-            </p>
-            <h3 className="text-[16px] md:text-[20px] font-semibold mb-3">3.1 Information you provide</h3>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Account and identity:</strong> name, date of birth, email address, phone number, address, government-issued ID, photograph, and biometric data where required for verification.</li>
-              <li><strong>Financial and payment:</strong> bank account details, payment method information, transaction history, and related verification information.</li>
-              <li><strong>Communications:</strong> content of messages you send to us (e.g. via support, chat, or email).</li>
-              <li><strong>Preferences and marketing:</strong> communication preferences and marketing consents where you have opted in.</li>
-            </ul>
-            <h3 className="text-[16px] md:text-[20px] font-semibold mb-3">3.2 Information we collect automatically</h3>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Device and usage:</strong> device type, operating system, unique device identifiers, IP address, browser type, and language.</li>
-              <li><strong>Usage data:</strong> pages visited, features used, time and date of access, and referral source.</li>
-              <li><strong>Location:</strong> approximate or precise location where permitted by your device settings and applicable law.</li>
-            </ul>
-            <h3 className="text-[16px] md:text-[20px] font-semibold mb-3">3.3 Information from third parties</h3>
-            <p className="mb-4">
-              We may receive information from identity verification providers, payment processors, banks, and other partners necessary to provide the Services, prevent fraud, and comply with law.
-            </p>
-            <p>
-              Providing certain data is necessary to use parts of our Services (e.g. account creation and transactions). If you do not provide required information, we may not be able to offer you those Services.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">4. How we use your information</h2>
-            <p className="mb-4">We use your Personal Data for the following purposes and, where required by law, on the stated lawful basis:</p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Providing the Services:</strong> account creation and management, identity verification, processing deposits, conversions, withdrawals, bill payments, and transfers.</li>
-              <li><strong>Contract performance:</strong> fulfilling our contract with you and communicating about your account and transactions.</li>
-              <li><strong>Security and fraud prevention:</strong> protecting our systems and users, detecting and preventing fraud, money laundering, and other illegal activity.</li>
-              <li><strong>Legal and regulatory compliance:</strong> meeting obligations under the NDPA, anti-money laundering, tax, and other applicable laws and responding to lawful requests from authorities.</li>
-              <li><strong>Improvement and analytics:</strong> analysing usage to improve our Site and Services, develop new features, and conduct research (including in anonymised or aggregated form).</li>
-              <li><strong>Customer support:</strong> responding to your enquiries and resolving issues.</li>
-              <li><strong>Marketing:</strong> sending you product updates and marketing communications only where you have consented or where we are otherwise permitted by law.</li>
-              <li><strong>Automated decision-making:</strong> where we use automated processes (e.g. for fraud or risk assessment), we ensure fairness and, where required, provide you with the right to obtain human review or challenge decisions.</li>
+            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">How We Use The Information We Collect</h2>
+            <p className="mb-4">Paxalpay uses this Data Privacy Policy for any business that we do. Information we collect helps us do the following and more:</p>
+            <ul className="list-disc pl-6 space-y-4">
+              <li>To render our business better to you and all other users; and to assure a smooth, seamless experience in our product and with every payment we dispatch thanks to an accelerated progress of transactions.</li>
+              <li>To research and development relating to the products and services we provide. We'll use information carefully to measure the usage rate of our Services. This helps us ensure our products are safe, well tested, and to see if you use it in the exact way intended, so that we can fix any discrepancies found as we deem fit.</li>
+              <li>To provide tech support</li>
+              <li>For marketing and communicating specific features with our users. Including phishing warning issues, messages for errors, general updates and communicating with you about your account.</li>
+              <li>To manage and limit the risks.</li>
+              <li>For compliance and legal concerns. This includes things like answering regulatory requests from Paxalpay partners as well as verifying your identity in order to meet our legal obligations and our commitment to security.</li>
             </ul>
             <p className="mt-4">
-              We do not use your Personal Data for purposes incompatible with those described above unless we have your consent or a clear legal basis.
+              Note that Paxalpay restricts access to your personal information to Paxalpay employees, sub-contractors and other partners in order to run our business, to assist you in using our products and services, and to provide the features and functionality of our platform to the fullest extent.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">5. How we share your information</h2>
-            <p className="mb-4">We may share your Personal Data with:</p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Service providers:</strong> cloud hosting, payment processing, identity verification, analytics, email delivery, and other providers who process data on our instructions and under contracts that protect your data.</li>
-              <li><strong>Banking and financial partners:</strong> where necessary to provide settlement, banking, and regulated financial services.</li>
-              <li><strong>Regulators and authorities:</strong> when required by law or to protect our rights, your safety, or the public.</li>
-              <li><strong>Professional advisers:</strong> lawyers, auditors, and insurers where necessary for our operations.</li>
-              <li><strong>Corporate transactions:</strong> in connection with a merger, sale of assets, or other corporate change, subject to the same privacy protections.</li>
+            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">How We Might Share Your Information</h2>
+            <p className="mb-4">We may share your Personal Data with our trusted partners:</p>
+            <ul className="list-disc pl-6 space-y-4">
+              <li>Our affiliates and business partners. We may choose to share your data relating to our services with our partners and affiliates so we may smoothly fulfill our obligations with you and all other parties.</li>
+              <li>Third-party service providers. We may employ companies or individuals to perform functions on our behalf. For instances: identity verification tools, databases analyzing our data, communicating with you, sending receipts, regulations/compliance, legal counsel, and risk, audits. We may share your data with them for these purposes, to the maximum extent permitted by law.</li>
+              <li>Law enforcement authorities or other government entities. Where we are legally bound to do so, in instances when we reasonably believe you contravene any laws applying to our terms of service, and any other agreements with Paxalpay.</li>
+              <li>To Business / merchant partners. We may share your data (some of it) mostly relating to your transaction metadata when you interact or transact with them. This happens so as to fulfill certain security protocols. Any data being shared to a business or merchant by us depends strictly on your interaction with them.</li>
             </ul>
             <p className="mt-4">
-              We do not sell your Personal Data. We may share data with third parties only as described above or with your consent.
+              In addition to the above, we may share Personal Data where you explicitly consent to its disclosure or direct us to share it.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">6. International transfers</h2>
+            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">Data Transfer</h2>
             <p className="mb-4">
-              Your data may be transferred to and processed in countries outside Nigeria or your country of residence. Those countries may have different data protection laws. When we transfer data internationally, we implement appropriate safeguards (e.g. standard contractual clauses, adequacy decisions, or other mechanisms recognised by applicable law) to protect your data.
+              Whenever you transfer your data to us, we process it in compliance with the relevant data protection laws within the limits of its requirements. When necessary we may choose to transfer your data outside your country in order to guarantee you standard service quality. We always employ standard protocols to protect our users globally. When you provide us with this information, you agree to its transfer and storage in locations where we process it. Be certain it is solely transferred when necessary and protected globally where permitted.
             </p>
             <p>
-              You may request details of the safeguards we use for international transfers by contacting us at{" "}
-              <a href={`mailto:${EMAIL_PRIVACY}`} className="text-blue-600 hover:underline">{EMAIL_PRIVACY}</a>.
+              We reserve the right to process your Personal Data wherever it is collected, subject to adequate data protection laws or an assessment strictly comparable to our compliance standard.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">7. Data retention</h2>
+            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">Data Security And Retention</h2>
             <p className="mb-4">
-              We retain your Personal Data only for as long as necessary to fulfil the purposes set out in this policy, including to provide the Services, comply with legal, tax, and regulatory obligations, resolve disputes, and enforce our agreements.
+              We value your trust in establishing an engagement with us. We understand that your data may be subject to compromise so we guarantee protection of your data through strict security measures. We secure your personal data from loss, unauthorized access, copying, use, modification or disclosure. Only authorized personnel and third parties will be uniquely granted access to any personal data, and this will be strictly done due to a need for that specific data and only as required by law. Please note that no method of transmission of information through cyberspace or method of physical storage is 100% fail-proof. Thus, absolute security cannot be guaranteed.
             </p>
             <p className="mb-4">
-              Typically we retain: (a) account and transaction data for the duration of your relationship with us and for a period thereafter as required by law (e.g. 5–7 years for financial and anti-money laundering compliance); (b) marketing and support communications in line with our internal policies; (c) logs and security-related data for a limited period necessary for security and fraud prevention.
+              In addition, we do not require any particular data relating to religion, political inclination, health and any other data inapplicable to providing our service. Note that when you choose to use our products, it guarantees some level of interaction with third parties when navigating, thus we cannot assure the security of your data on those platforms. Only data relating to Paxalpay services would be handled uniquely and with complete adherence to our standard compliance.
             </p>
             <p>
-              After the retention period, we securely delete or anonymise your data so it no longer identifies you.
+              Please notify us immediately of any compromise you note regarding your data related to us, or within Paxalpay. Any personal data relating to you but in cases requiring your interaction with other sources, please address your concerns with the entity possessing that required data.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">8. Security</h2>
-            <p className="mb-4">
-              We implement technical and organisational measures to protect your Personal Data against unauthorised access, alteration, disclosure, or destruction, including encryption, access controls, and secure development practices. Access to Personal Data is limited to personnel and service providers who need it to perform their duties.
-            </p>
-            <p className="mb-4">
-              In the event of a personal data breach that is likely to result in a risk to your rights and freedoms, we will notify the relevant supervisory authority and, where required by law, notify you without undue delay.
-            </p>
+            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">Retention Of Your Personal Data</h2>
             <p>
-              You are responsible for keeping your account credentials confidential. Do not share your password or one-time codes with anyone. If you suspect unauthorised access, contact us immediately at{" "}
-              <a href={`mailto:${EMAIL_INFO}`} className="text-blue-600 hover:underline">{EMAIL_INFO}</a>.
+              We will retain your Personal Data for as long as necessary to fulfill the purposes for which it was collected, and for as long as required by applicable laws. The criteria used to determine our retention periods include among others: the length of time we have an ongoing relationship with you, whether there is a legal obligation to which we are subject, and whether retention is advisable considering our legal position.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">9. Cookies and similar technologies</h2>
+            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">Choices And Similar Technologies</h2>
             <p className="mb-4">
-              We and our partners use cookies, web beacons, and similar technologies on our Site to provide functionality, analyse usage, and improve your experience.
+              When you use our Site, we and our partners, affiliates, and third parties may access or collect information. Technologies like Cookies, web beacons and other similar tools may be integrated manually or generally. Do note that they help analyze usage limits, trends and track navigation or traffic flow on our platforms mostly in order to give a better standard.
             </p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Strictly necessary:</strong> required for the Site to function (e.g. authentication, security). These cannot be disabled.</li>
-              <li><strong>Functional:</strong> remember preferences and settings to improve your experience.</li>
-              <li><strong>Analytics:</strong> help us understand how visitors use our Site (e.g. page views, flows).</li>
-              <li><strong>Marketing:</strong> used only with your consent to deliver relevant ads and measure campaign effectiveness.</li>
+            <p className="mb-4">
+              These tools gather information including Internet Protocol addresses, browser versions or standard metadata, etc. If desired, you may choose to opt out in some instances. To manually decide the extent to which you're involved, please review some available browser tools. Do know omitting the use of these features restricts interaction to our platform.
+            </p>
+            <p className="mb-4">We actively deploy specific tools like:</p>
+            <ul className="list-disc pl-6 space-y-4">
+              <li>Essential/strictly necessary cookies: We may use some cookies primarily relating to the functioning of our functions and features. Like identity and location verification, security tools, and fraud prevention measures.</li>
+              <li>Functionality cookies: These cookies help us track your preferences such as location. Remember, cookies are necessary for navigating and for your experience. They help to remember you on subsequent visits.</li>
+              <li>Other Analytic cookies. These analytics may be applied on our Site. This is purely to analyze the user volume or to assist in managing or determining ad conversions. They show us interactions and track performance to help improve your interaction with our Features.</li>
             </ul>
-            <p>
-              You can manage cookies through your browser settings. Disabling certain cookies may affect the functionality of the Site. For more information, contact us at{" "}
-              <a href={`mailto:${EMAIL_PRIVACY}`} className="text-blue-600 hover:underline">{EMAIL_PRIVACY}</a>.
-            </p>
           </section>
 
           <section>
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">10. Your rights</h2>
+            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">Legal Rights Provided To Data Subjects</h2>
             <p className="mb-4">
-              Subject to applicable law (including the NDPA and, where applicable, GDPR/UK GDPR), you may have the right to:
+              Subject to the law, you have a variation of rights regarding your personal data. The scope of your rights may include: the right to access your personal data, rectify it or have it updated, restrict the processing of your data, or withdraw consent previously given. In instances you prefer to opt-out, you may choose to modify your preferences in the App. Alternatively you may restrict marketing content via email links we provide in our mails to you, or further contact us to effect the changes.
             </p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Access:</strong> request a copy of the Personal Data we hold about you.</li>
-              <li><strong>Rectification:</strong> request correction of inaccurate or incomplete data.</li>
-              <li><strong>Erasure:</strong> request deletion of your data in certain circumstances.</li>
-              <li><strong>Restriction:</strong> request that we limit processing in certain cases.</li>
-              <li><strong>Portability:</strong> receive your data in a structured, machine-readable format where technically feasible.</li>
-              <li><strong>Object:</strong> object to processing based on our legitimate interests or for direct marketing.</li>
-              <li><strong>Withdraw consent:</strong> where we rely on consent, you may withdraw it at any time without affecting the lawfulness of processing before withdrawal.</li>
-              <li><strong>Complain:</strong> lodge a complaint with a data protection supervisory authority.</li>
-            </ul>
             <p className="mb-4">
-              To exercise any of these rights, contact us at{" "}
-              <a href={`mailto:${EMAIL_PRIVACY}`} className="text-blue-600 hover:underline">{EMAIL_PRIVACY}</a> or{" "}
-              <a href={`mailto:${EMAIL_INFO}`} className="text-blue-600 hover:underline">{EMAIL_INFO}</a>. We will respond within the timeframe required by applicable law and may need to verify your identity. We may not be able to fulfil a request where it would conflict with legal obligations or the rights of others.
+              Please note that exercising your rights could affect the full functionality of the product. And we may retain certain data for compliance or legal requests in retaining your data, or verifying it in keeping with our legal obligations. While you hold these privileges, Paxalpay reserves the right to decline your request, if we reasonably ascertain that our request to fulfill the request isn't legally required.
             </p>
             <p>
-              If you are in the EEA or UK, you have the right to lodge a complaint with your local data protection authority. In Nigeria, you may contact the Nigeria Data Protection Commission (NDPC).
+              You fully comprehend that at any point, your interactions, transactions or generally information relating to our services, or via other related means, that we reasonably believe requires compliance, we may retain such data.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">11. Children</h2>
-            <p>
-              Our Site and Services are not directed at anyone under 18. We do not knowingly collect Personal Data from anyone under 18. If you believe we have collected data from a minor, please contact us at{" "}
-              <a href={`mailto:${EMAIL_PRIVACY}`} className="text-blue-600 hover:underline">{EMAIL_PRIVACY}</a> and we will delete it promptly.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">12. Third-party links</h2>
-            <p>
-              Our Site may contain links to third-party websites or services. We are not responsible for their privacy practices. This Privacy Policy applies only to our Site and Services. We encourage you to read the privacy policies of any third-party sites you visit.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">13. Changes to this policy</h2>
+            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">Links To Other Websites</h2>
             <p className="mb-4">
-              We may update this Privacy Policy from time to time. We will post the updated version on this page and update the “Last updated” date. For material changes, we will notify you by email (to the address associated with your account) or through a prominent notice on our Site before the change takes effect.
+              Our Platform may contain links to websites owned by third parties. Please note that we are not responsible for the privacy practices of such websites.
             </p>
             <p>
-              Your continued use of our Site or Services after the effective date of any change constitutes acceptance of the updated policy. We encourage you to review this page periodically.
+              Note that linking out your operations by interacting or using services available on other platforms means you are to respect their privacy choices. Paxalpay strongly suggests that our users familiarizes themselves with those pages or platforms before visiting. There are requirements by those providers upon receiving personal or non-personal data relating to individuals via any linked website. Paxalpay will not normally be liable for any related data usage incidents. However, in any likelihood you notice any breach as they relate strictly to our interactions and with our products, do direct us immediately via the appropriate channels as soon as reasonably possible.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">Children</h2>
+            <p className="mb-4">
+              Paxalpay understands the importance of protecting children's privacy. Children are therefore strictly advised not to be registered on or utilize any Paxalpay products or services below 18.
+            </p>
+            <p>
+              Paxalpay platforms and apps are not intended for use by persons under 18. Anyone utilizing any of Paxalpay's products below 18 is therefore operating with fraudulent information, and as such if it comes to our notice, the information will be destroyed.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">Changes To This Privacy Policy</h2>
+            <p>
+              From time to time, Paxalpay reserves the right to update this privacy policy globally or otherwise. We will normally directly reflect any newly introduced or adjusted feature for your clarity and notice. You understand that this page is solely responsible to communicate the updates.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">14. Contact us</h2>
+            <h2 className="text-[18px] md:text-[23px] font-bold mb-4">Contact</h2>
             <p className="mb-4">
-              For questions about this Privacy Policy or our data practices, or to exercise your rights:
+              If you have any questions relating to anything on the privacy statement, our information or our general practice as a user across our service platforms or with partners, please reach out to us at <a href={`mailto:${EMAIL_INFO}`} className="text-[#262626]">info@paxalpay.com</a>.
             </p>
-            <ul className="list-none space-y-1 mb-4">
-              <li>Email: <a href={`mailto:${EMAIL_PRIVACY}`} className="text-blue-600 hover:underline">{EMAIL_PRIVACY}</a> (privacy) or <a href={`mailto:${EMAIL_INFO}`} className="text-blue-600 hover:underline">{EMAIL_INFO}</a> (general)</li>
-              <li>Website: <Link href="/help" className="text-blue-600 hover:underline">{SITE_URL}/help</Link> (support)</li>
-            </ul>
-            <p className="mb-4">
-              If you believe your data has been mishandled, please contact us as above. We will investigate and respond within the timeframes required by applicable law (e.g. 72 hours for initial acknowledgment where required under the NDPA).
-            </p>
-            <p className="font-medium mt-8">
-              Your use of our Site and Services constitutes acceptance of this Privacy Policy.
+            <p>
+              You could also direct correspondence to our support channel.
             </p>
           </section>
         </div>

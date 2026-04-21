@@ -27,7 +27,7 @@ export default function SpiralSection() {
           </div>
 
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
-            <Image src="/middle.png" alt="App phone" width={320} height={380} className="flex-shrink-0" priority />
+            <Image src="/middle2.png" alt="App phone" width={320} height={380} className="flex-shrink-0" priority />
           </div>
         </div>
 
@@ -45,7 +45,7 @@ export default function SpiralSection() {
           </div>
 
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
-            <Image src="/middle.png" alt="App phone" width={400} height={480} className="flex-shrink-0" priority />
+            <Image src="/middle2.png" alt="App phone" width={400} height={480} className="flex-shrink-0" priority />
           </div>
 
           <div className="absolute bottom-[150px] left-[calc(50%-580px)]">
