@@ -14,7 +14,7 @@ const tabs = [
   {
     label: "Your Money Works Anywhere",
     content:
-      "Paxalpay offers transaction speed and reliability. Send to any bank account, Transfer to friends, Pay merchants, Spend as normal",
+      "Paxalpay offers transaction speed and reliability. Send to any bank account, Transfer to friends, Pay merchant, Spend as normal",
     image: "/tab2.png",
     layout: "background", // image as background
   },
