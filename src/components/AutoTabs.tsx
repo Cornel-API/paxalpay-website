@@ -8,7 +8,7 @@ const tabs = [
     label: "Instant Crypto-to-Fiat Wallet Funding",
     content:
       "Deposit USDT, USDC, BTC, ETH and more. We instantly convert it to your local currency so you can use it immediately for anything: transfers, bills, purchases, airtime.",
-    image: "/tab1.png",
+    image: "/first_tab.png",
     layout: "side", // text left, image right
   },
   {

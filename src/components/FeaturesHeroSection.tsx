@@ -34,7 +34,7 @@ export default function FeaturesHeroSection() {
                     <FadeIn delay={0.3} direction="left" className="w-full flex justify-center md:justify-end">
                         <div className="relative w-[481px] md:w-[755px] h-[321px] md:h-[504px]">
                             <Image
-                                src="/tab1.png"
+                                src="/first_tab.png"
                                 alt="Woman holding cash with Paxalpay app showing wallet balance"
                                 width={755}
                                 height={504}

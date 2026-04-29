@@ -29,8 +29,8 @@ export default function SupportSection() {
 
       <div className="mt-10 flex items-center justify-center">
         <div className="relative w-full max-w-[960px]">
-          <Image src="/mobile.png" alt="Mobile preview" width={360} height={640} className="object-contain md:hidden" priority />
-          <Image src="/desktop.png" alt="Desktop preview" width={1000} height={540} className="object-contain hidden md:block" priority />
+          <Image src="/mobile2.png" alt="Mobile preview" width={360} height={640} className="object-contain md:hidden" priority />
+          <Image src="/desktop2.png" alt="Desktop preview" width={1000} height={540} className="object-contain hidden md:block" priority />
         </div>
       </div>
 
